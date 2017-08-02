@@ -1,6 +1,9 @@
 <?php
 class Pages extends CI_Controller {
 
+    public function index(){
+      echo "303 found";
+    }
     public function view($page = 'home')
   {
       if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
