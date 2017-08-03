@@ -8,6 +8,7 @@ class Modulos_model extends CI_Model {
 
   function custom_get() {
     // $result = false;/
+    // interactua con la DB
     $res = $this->db->query("SELECT * FROM modulos;");
     // echo "Success!";
     // }else{

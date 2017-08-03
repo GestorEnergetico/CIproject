@@ -1,4 +1,4 @@
 <?php
 foreach ($result as $val) {
-  echo  $val["id_modulo"] . "<br>\n";
+  echo  $val["nombre_modulo"] . "<br>\n";
 }
