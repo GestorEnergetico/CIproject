@@ -12,7 +12,7 @@ class Home extends CI_Controller {
   public function index(){
     $data = array();
     $this->load->model('Modulos_model');
-    $data['result'] = $this->modulos_model->custom_get();
+    $data['result'] = $this->Modulos_model->custom_get();
     $page = "home";
     $data['title'] = ucfirst($page); // Capitalize the first letter
     $this->load->view('templates/header', $data);
