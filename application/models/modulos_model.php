@@ -1,7 +1,7 @@
 <?php
 
-class modulos_model extends CI_Model {
-  function modulos_model(){
+class Modulos_model extends CI_Model {
+  function Modulos_model(){
     parent::__construct();
   }
 
