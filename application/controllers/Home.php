@@ -11,7 +11,7 @@ class Home extends CI_Controller {
 
   public function index(){
     $data = array();
-    $this->load->model('modulos_model');
+    $this->load->model('Modulos_model');
     $data['result'] = $this->modulos_model->custom_get();
     $page = "home";
     $data['title'] = ucfirst($page); // Capitalize the first letter

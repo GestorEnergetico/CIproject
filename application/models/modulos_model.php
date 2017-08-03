@@ -1,8 +1,9 @@
 <?php
 
 class Modulos_model extends CI_Model {
-  function Modulos_model(){
-    parent::__construct();
+
+  public function __construct(){
+      parent::__construct();
   }
 
   function custom_get() {
