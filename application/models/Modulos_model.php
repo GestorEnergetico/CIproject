@@ -13,6 +13,6 @@ class Modulos_model extends CI_Model {
     // }else{
     // echo "Query failed!";
 
-    return $res->result();
+    return $res->result_array();
   }
 }
