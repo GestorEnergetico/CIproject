@@ -10,7 +10,7 @@ class Modulos_model extends CI_Model {
     $result = false;
     $res = $this->db->simple_query('SELECT * FROM modulos');
     // echo "Success!";
-    $result = $res->result_array();
+    $result = $res->result();
     // }else{
     // echo "Query failed!";
 
