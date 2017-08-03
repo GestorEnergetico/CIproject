@@ -1,3 +1,4 @@
 <?php
-
-echo "<h1>la</h1>";
+foreach ($result as $val) {
+  var_dump($val);
+}
