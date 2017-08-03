@@ -1,4 +1,4 @@
 <?php
 foreach ($result as $val) {
-  var_dump($val);
+  echo  $val["id_modulo"] . "<br>\n";
 }
