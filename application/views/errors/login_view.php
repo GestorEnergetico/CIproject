@@ -8,7 +8,7 @@
     <title>Login Area</title>
 
     <!-- Bootstrap -->
-    <link href"=<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href"=<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,8 +50,8 @@
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url() ?>assets/js/jquery.min.js"</script>
+    <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"</script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo base_url() ?>assets/js/jquery.min.js"</script>
+    <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"</script>
   </body>
 </html>
