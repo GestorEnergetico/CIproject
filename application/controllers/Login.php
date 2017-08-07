@@ -22,7 +22,7 @@ class Login extends CI_Controller {
     if ($result) {
       $sess_array = array();
       foreach ($result as $row){
-        $sess_array = $array('id' => $row->id, 'username' => $row->username, 'fullname' => $row->fullname);
+        $sess_array = $arrayName = array('id' => $row->id, 'username' => $row->username, 'fullname' => $row->fullname);
         $this->session->set_userdata('logged_in', $sess_array);
       }
       return true;
