@@ -7,8 +7,8 @@ class Login extends CI_Controller {
   }
 
   public function index(){
-    $data = array();
-    $this->load->model('Login_view');
+
+    $this->load->model('login_view');
   }
 }
 ?>
