@@ -43,8 +43,8 @@
 
                   <div class="form-group">
                     <?php
-                      echo from_label('Username'.'username');
-                      echo from_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
+                      echo form_label('Username'.'username');
+                      echo form_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
                      ?>
 
                     <label for="exampleInputEmail1">Email address</label>
@@ -54,8 +54,8 @@
 
                  <div class="form-group">
                    <?php
-                     echo from_label('Password'.'password');
-                     echo from_password('password','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
+                     echo form_label('Password'.'password');
+                     echo form_password('password','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
                     ?>
                  </div>
                   <?php echo form_submit('login', 'Login', 'class="btn btn-primary"')?>
