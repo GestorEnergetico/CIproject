@@ -37,7 +37,7 @@ class Login extends CI_Controller {
       redirect('login');
 
     }else {
-      $this->load->view('register_view')
+      $this->load->view('register_view');
     }
   }
 }
