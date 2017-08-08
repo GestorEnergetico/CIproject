@@ -19,25 +19,32 @@
   </head>
   <body>
     <!-- LOGIN -->
-    <div class="container" style="margin-top:80px;">
+    <div class="container" style="margin-top:100px;">
 
       <div class="row">
         <div class="col-md-4"></div>
           <div class="col-md-4">
             <div class="panel panel-default">
               <div class="panel-body">
+
                 <?php if (validation_error()){
                 }
                 ?>
-
                 <div class="alert alert-danger alert-dismissible" role="alert">
                   <button type="button" name="button" class="close" data-dismiss="alert" aria-label="true">&times;<span></span>
                   </button>
                   <strong><?php echo validation_error(); ?></strong>
                 </div>
 
-                <form action="<?php echo site_url('login') ?>" method="post">
+                <?php
+                  echo form_open('login','class="myclass"');
+                 ?>
+
                   <div class="form-group">
+                    <?php
+                      echo from_label('Username'.'username');
+                      echo from_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
+                     ?>
 
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -45,17 +52,18 @@
                   </div>
 
                  <div class="form-group">
-                   <label for="exampleInputPassword1">Password</label>
-                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                   <?php
+                     echo from_label('Password'.'password');
+                     echo from_password('password','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
+                    ?>
                  </div>
-                  <button type="submit" class="btn btn-primary">Login</button>
-                  <a href="<?php echo site_url('login') ?>" class="btn btn-link">Sing up</a>
-                 </form>
+                  <?php echo form-submit('login', 'Login', 'class="btn btn-primary"')?>
+                  <a href="<?php echo site_url('login/register') ?>" class="btn btn-link">Sing up</a>
+                 <?php echo form_close() ; ?>
 
               </div>
             </div>
           </div>
-
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

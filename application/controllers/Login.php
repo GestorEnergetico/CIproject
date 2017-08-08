@@ -21,15 +21,27 @@ class Login extends CI_Controller {
     $result = $this->login->login($username, $password);
     if ($result) {
       $sess_array = array();
-      foreach ($result as $row){
-        $sess_array = $arrayName = array('id' => $row->id, 'username' => $row->username, 'fullname' => $row->fullname);
-        $this->session->set_userdata('logged_in', $sess_array);
-      }
-      return true;
-    } else {
+        foreach ($result as $row){
+          $sess_array = $arrayName = array('id' => $row->id, 'username' => $row->username, 'fullname' => $row->fullname);
+          $this->session->set_userdata('logged_in', $sess_array);
+        }
+        return true;
+    } else{
       $this->form_validation->set_message('basisdata_cek', 'Invalid username or password ()');
       return false;
     }
+  }
+  public function register(){
+    if($this->input->post('bho')){
+      $this->login->register();
+      redirect('login');
+
+    }else {
+      $this->load->view('register_view')
+
+    }
+
+
   }
 }
 ?>

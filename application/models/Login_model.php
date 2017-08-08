@@ -19,4 +19,11 @@ class Login_model extends CI_Model {
       return false;
     }
   }
+  funciotn register(){
+    $fn = $this->input->post('fullname');
+    $un = $this->input->post('username');
+    $pw = $this->input->post('password');
+      $data = $arrayName = array('id' => , 'fullname' => $fn, 'username' => $un, 'password' => $pw);
+      $this->db->insert('user', $data);
+  }
 }
