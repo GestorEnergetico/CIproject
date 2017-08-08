@@ -21,7 +21,6 @@
     <!-- LOGIN -->
     <div class="container" style="margin-top:100px;">
 
-
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"</script>
