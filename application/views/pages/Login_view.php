@@ -26,6 +26,19 @@
           <div class="col-md-4">
             <div class="panel panel-default">
               <div class="panel-body">
+                <?php if (validation_error()){
+                }
+                ?>
+
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                  <button type="button" name="button" class="close" data-dismiss="alert" aria-label="true">&times;<span></span>
+                  </button>
+                  <strong><?php echo validation_error(); ?></strong>
+                </div>
+
+
+
+
 
                 <form action="<?php echo site_url('login') ?>" method="post">
                   <div class="form-group">
@@ -40,7 +53,7 @@
                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                  </div>
                   <button type="submit" class="btn btn-primary">Login</button>
-                  <a href="<?php echo site_url('login') ?>" class="btn btn-link"</a>
+                  <a href="<?php echo site_url('login') ?>" class="btn btn-link">Sing up</a>
                  </form>
 
               </div>
