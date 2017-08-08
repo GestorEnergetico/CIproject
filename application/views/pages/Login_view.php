@@ -36,10 +36,6 @@
                   <strong><?php echo validation_error(); ?></strong>
                 </div>
 
-
-
-
-
                 <form action="<?php echo site_url('login') ?>" method="post">
                   <div class="form-group">
 
