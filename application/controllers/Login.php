@@ -10,7 +10,7 @@ class Login extends CI_Controller {
     $this->form_validation->set_rules('username', 'Username', 'trim|required');
     $this->form_validation->set_rules('username', 'Password', 'trim|required|callback_basisdata_cek');
     if ($this->form_validation->run()==false) {
-      $this->load->view('login_view');
+      $this->load->view('pages/login_view');
     }else {
       redirect(base_url('index.php/home'), 'refresh');
     }
