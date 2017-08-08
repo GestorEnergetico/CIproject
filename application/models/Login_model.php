@@ -24,7 +24,7 @@ class Login_model extends CI_Model {
     $fn = $this->input->post('fullname');
     $un = $this->input->post('username');
     $pw = $this->input->post('password');
-      $data = array('id' => , 'fullname' => $fn, 'username' => $un, 'password' => $pw);
-      $this->db->insert('user', $data);
+    $data = array('id' => '', 'fullname' => $fn, 'username' => $un, 'password' => $pw);
+    $this->db->insert('user', $data);
   }
 }
