@@ -19,7 +19,8 @@ class Login_model extends CI_Model {
       return false;
     }
   }
-  funciotn register(){
+
+  function register(){
     $fn = $this->input->post('fullname');
     $un = $this->input->post('username');
     $pw = $this->input->post('password');
