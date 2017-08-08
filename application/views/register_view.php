@@ -46,6 +46,12 @@
                       echo from_input('fullname','','class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="bho"');
                      ?>
 
+                     <div class="form-group">
+                       <?php
+                         echo from_label('Username'.'username');
+                         echo from_input('username','','class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="bho"');
+                        ?>
+
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
