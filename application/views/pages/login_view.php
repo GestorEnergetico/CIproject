@@ -42,8 +42,6 @@
                  ?>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     <?php
                       echo form_label('Username'.'username');
                       echo form_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username"');
@@ -53,7 +51,7 @@
                  <div class="form-group">
                    <?php
                      echo form_label('Password'.'password');
-                     echo form_input('password','','class="form-control" id="exampleInputEmail1" placeholder="Enter password"');
+                     echo form_input('password','','class="form-control" id="" placeholder="Enter password"');
                     ?>
                  </div>
 
