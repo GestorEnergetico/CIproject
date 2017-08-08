@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Login Area</title>
+    <title>Register Area</title>
 
     <!-- Bootstrap -->
     <link href"=<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -37,13 +37,13 @@
                 </div>
 
                 <?php
-                  echo form_open('login','class="myclass"');
+                  echo form_open('login/register','class="myclass"');
                  ?>
 
                   <div class="form-group">
                     <?php
-                      echo from_label('Username'.'username');
-                      echo from_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
+                      echo from_label('Fullname'.'fullname');
+                      echo from_input('fullname','','class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="bho"');
                      ?>
 
                     <label for="exampleInputEmail1">Email address</label>

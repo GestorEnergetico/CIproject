@@ -57,9 +57,9 @@
                      echo from_password('password','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
                     ?>
                  </div>
-                  <?php echo form-submit('login', 'Login', 'class="btn btn-primary"')?>
+                  <?php echo form_submit('login', 'Login', 'class="btn btn-primary"')?>
                   <a href="<?php echo site_url('login/register') ?>" class="btn btn-link">Sing up</a>
-                 <?php echo form_close() ; ?>
+                 <?php echo form_close()?>
 
               </div>
             </div>
