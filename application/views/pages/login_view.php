@@ -27,13 +27,14 @@
             <div class="panel panel-default">
               <div class="panel-body">
 
-                <?php if (validation_error()){
+                <?php if (validation_errors()){
                 }
                 ?>
+
                 <div class="alert alert-danger alert-dismissible" role="alert">
                   <button type="button" name="button" class="close" data-dismiss="alert" aria-label="true">&times;<span></span>
                   </button>
-                  <strong><?php echo validation_error(); ?></strong>
+                  <strong><?php echo validation_errors(); ?></strong>
                 </div>
 
                 <?php
