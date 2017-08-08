@@ -38,10 +38,7 @@ class Login extends CI_Controller {
 
     }else {
       $this->load->view('register_view')
-
     }
-
-
   }
 }
 ?>
