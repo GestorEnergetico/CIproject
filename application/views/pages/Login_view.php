@@ -30,6 +30,8 @@
     </div>
   </div>
 
+  <br>
+
   <div class="content_login flex">
     <div class="box">
       <span class="img"></span>
