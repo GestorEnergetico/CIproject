@@ -29,6 +29,32 @@
       </div>
     </div>
   </div>
+
+  <div class="content_login flex">
+    <div class="box">
+      <span class="img"></span>
+      <div class="login">
+        <label><i class="fa fa-user" aria-hidden="true"></i> <input type="text" placeholder="Username" name="username" value=""></label>
+        <label><i class="fa fa-lock" aria-hidden="true"></i> <input type="password" placeholder="Password" name="password" value=""></label>
+        <button type="button" name="button">Log in</button>
+      </div>
+      <div class="lostpassword">
+        <p>Recover Account</p>
+        <label><i class="fa fa-paper-plane" aria-hidden="true"></i><input type="email" placeholder="example@domain.com" name="" value=""></label>
+      </div>
+      <div class="register">
+        <p>Create Account</p>
+        <label><i class="fa fa-user" aria-hidden="true"></i> <input type="text" placeholder="Username" name="username" value=""></label>
+        <label><i class="fa fa-lock" aria-hidden="true"></i> <input type="password" placeholder="Password" name="password" value=""></label>
+        <label><i class="fa fa-lock" aria-hidden="true"></i> <input type="password" placeholder="Repeat Password" name="repassword" value=""></label>
+      </div>
+    </div>
+    <p>
+      <a href="#">Back to Home</a>
+      <a href="#">Lost your password</a>
+    </p>
+  </div>
+
     <!-- LOGIN -->
     <div class="container" style="margin-top:100px;">
 
@@ -55,7 +81,7 @@
                  <div class="form-group">
                    <?php
                      echo form_label('Email'.'email');
-                     echo form_input('email','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username"');
+                     echo form_input('email','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');
                     ?>
                  </div>
 
