@@ -54,8 +54,8 @@
 
                  <div class="form-group">
                    <?php
-                     echo form_label('Username'.'username');
-                     echo form_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username"');
+                     echo form_label('Email'.'email');
+                     echo form_input('email','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username"');
                     ?>
                  </div>
 
