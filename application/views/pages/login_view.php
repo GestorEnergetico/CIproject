@@ -41,6 +41,13 @@
                   echo form_open('login','class="myclass"');
                  ?>
 
+                 <div class="form-group">
+                   <?php
+                     echo form_label('Username'.'username');
+                     echo form_input('username','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username"');
+                    ?>
+                 </div>
+
                   <div class="form-group">
                     <?php
                       echo form_label('Username'.'username');

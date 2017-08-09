@@ -31,6 +31,7 @@ class Login extends CI_Controller {
       return false;
     }
   }
+  
   public function register(){
     if($this->input->post('bho')){
       $this->login->register();
