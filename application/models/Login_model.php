@@ -5,6 +5,7 @@ class Login_model extends CI_Model {
   public function __construct(){
     parent::__construct();
   }
+//login
   function login($username, $password) {
     $this->db->select('id,fullname,username,password');
     $this->db->from('user');
@@ -19,7 +20,7 @@ class Login_model extends CI_Model {
       return false;
     }
   }
-
+//Registration
   function register(){
     $fn = $this->input->post('fullname');
     $un = $this->input->post('username');
