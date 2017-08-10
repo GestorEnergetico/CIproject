@@ -31,9 +31,6 @@
   </div>
 
   <br>
-
-
-
     <!-- LOGIN -->
     <div class="container" style="margin-top:100px;">
 
@@ -57,7 +54,7 @@
                   echo form_open('login','class="myclass"');
                  ?>
 
-                 <div class="form-group" style="text-align:center;">
+                 <div class="form-group">
                    <?php
                      echo form_label('Email'.'email');
                      echo form_input('email','','class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"');

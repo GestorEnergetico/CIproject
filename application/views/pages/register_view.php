@@ -69,13 +69,13 @@
                 <div class="form-group">
                   <?php
                     echo form_label('Fullname'.'fullname');
-                    echo form_input('fullname','','class="form-control" id="fullname" placeholder="bho"');
+                    echo form_input('fullname','','class="form-control" id="fullname" placeholder="fullname"');
                     ?>
 
                 <div class="form-group">
                     <?php
                       echo form_label('Username'.'username');
-                      echo form_input('username','','class="form-control" id="username" placeholder="bho"');
+                      echo form_input('username','','class="form-control" id="username" placeholder="username"');
                     ?>
 
                 <div class="form-group">
