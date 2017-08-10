@@ -59,7 +59,7 @@
                 <div class="alert alert-danger alert-dismissible" role="alert">
                   <button type="button" name="button" class="close" data-dismiss="alert" aria-label="true">&times;<span></span>
                   </button>
-                  <strong><?php echo validation_error(); ?></strong>
+                  <strong><?php echo validation_errors(); ?></strong>
                 </div>
 
                 <?php
