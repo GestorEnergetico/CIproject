@@ -23,8 +23,8 @@
       <div class="box">
         <img style="max-width:120px;" src="img\gestor-energetico-logo.png" alt="Logo Gestor Energético">
         <div class="login">
-        <label><i class="fa fa-user" aria-hidden="true"></i> <input type="text" placeholder="Username" name="username" value=""></label>
-        <label><i class="fa fa-lock" aria-hidden="true"></i> <input type="password" placeholder="Password" name="password" value=""></label>
+        <label><i class="fa fa-user" aria-hidden="true"></i> Username<input type="text" placeholder="Username" name="username" value=""></label>
+        <label><i class="fa fa-lock" aria-hidden="true"></i> Password<input type="password" placeholder="Password" name="password" value=""></label>
         <button type="button" name="button">Log in</button>
       </div>
     </div>
