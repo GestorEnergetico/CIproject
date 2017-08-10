@@ -53,7 +53,7 @@
             <div class="panel panel-default">
               <div class="panel-body">
 
-                <?php if (validation_error()){
+                <?php if (validation_errors()){
                 }
                 ?>
                 <div class="alert alert-danger alert-dismissible" role="alert">
