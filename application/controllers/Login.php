@@ -31,14 +31,14 @@ class Login extends CI_Controller {
       return false;
     }
   }
-  
+
   public function register(){
     if($this->input->post('bho')){
       $this->login->register();
       redirect('login');
 
     }else {
-      $this->load->view('register_view');
+      $this->load->view('pages/register_view');
     }
   }
 }
