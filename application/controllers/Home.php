@@ -15,7 +15,7 @@ class Home extends CI_Controller {
     }else {
       redirect('login', 'refresh');
     }
-    
+
     public function logout()
     {
       $this->session->unset_userdata('logged_in');
@@ -33,7 +33,7 @@ class Home extends CI_Controller {
     $page = "home_view";
     $data['title'] = ucfirst($page); // Capitalize the first letter
     $this->load->view('templates/header', $data);
-    $this->load->view('pages/'.$page, $data);
+    $this->load->view('pages/home_view'.$page, $data);
     $this->load->view('templates/footer', $data);
   }
   // public function alumnos($args){

@@ -81,7 +81,7 @@
                 <div class="form-group">
                   <?php
                     echo form_label('Password'.'password');
-                    echo form_password('password','','class="form-control" id="password" placeholder="Enter password"');
+                    echo form_password('password','','class="form-control" id="password" placeholder="password"');
                   ?>
                </div>
                   <?php echo form_submit('login', 'Register', 'class="btn btn-primary"')?>
