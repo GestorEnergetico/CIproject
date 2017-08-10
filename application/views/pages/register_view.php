@@ -84,7 +84,7 @@
                     echo form_password('password','','class="form-control" id="password" placeholder="Enter password"');
                   ?>
                </div>
-                  <?php echo form_submit('login', 'Login', 'class="btn btn-primary"')?>
+                  <?php echo form_submit('login', 'Register', 'class="btn btn-primary"')?>
                   <a href="<?php echo site_url('login') ?>" class="btn btn-link">Sing in</a>
                   <?php echo form_close()?>
 
