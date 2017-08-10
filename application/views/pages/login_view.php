@@ -24,7 +24,7 @@
         <img style="max-width:120px;" src="img\gestor-energetico-logo.png" alt="Logo Gestor Energético">
         <div class="login">
         <label><i class="fa fa-user" aria-hidden="true"></i> Username<input type="text" placeholder="Username" name="username" value=""></label><br>
-        <label><i class="fa fa-lock" aria-hidden="true"></i> Password<input type="password" placeholder="Password" name="password" value=""></label>
+        <label><i class="fa fa-lock" aria-hidden="true"></i> Password<input type="password" placeholder="Password" name="password" value=""></label><br>
         <button type="button" name="button">Log in</button>
       </div>
     </div>
@@ -74,7 +74,7 @@
                  <div class="form-group">
                    <?php
                      echo form_label('Password'.'password');
-                     echo form_input('password','','class="form-control" id="" placeholder="Enter password"');
+                     echo form_password('password','','class="form-control" id="" placeholder="Enter password"');
                     ?>
                  </div>
 
