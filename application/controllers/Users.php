@@ -11,8 +11,7 @@ public function __construct(){
 
 }
 
-public function index()
-{
+public function index(){
 $this->load->view("register_view2.php");
 }
 
@@ -46,7 +45,7 @@ else{
 
 public function login_view(){
 
-$this->load->view("login_model.php");
+$this->load->view("user_model.php");
 
 }
 
