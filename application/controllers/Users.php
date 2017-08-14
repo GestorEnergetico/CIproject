@@ -8,9 +8,7 @@ public function __construct(){
   			// $this->load->helper('url');
         // his->load->model('user_model');
         // $this->load->library('session');
-
 }
-
 public function index(){
 $this->load->view("register_view2.php");
 }
