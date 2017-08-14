@@ -10,7 +10,7 @@ public function __construct(){
         // $this->load->library('session');
 }
 public function index(){
-$this->load->view("register_view2.php");
+$this->load->view("pages/register_view2.php");
 }
 
 public function register_user(){
@@ -40,7 +40,7 @@ else{
 }
 
 public function login_view(){
-$this->load->view("login_view2.php");
+$this->load->view("pages/login_view2.php");
 }
 
 function login_user(){
@@ -70,7 +70,7 @@ function login_user(){
 
 function user_profile(){
 
-$this->load->view('user_profile_view.php');
+$this->load->view('pages/user_profile_view.php');
 
 }
 public function user_logout(){
