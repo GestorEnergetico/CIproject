@@ -64,7 +64,7 @@ function login_user(){
       }
       else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-        $this->load->view("login_view2.php");
+        $this->load->view("pages/login_view2.php");
       }
 }
 
