@@ -3,7 +3,7 @@ $user_id=$this->session->userdata('user_id');
 
 if(!$user_id){
 
-  redirect('user/login_view');
+  redirect('user/login_view2');
 }
  ?>
 
@@ -21,8 +21,6 @@ if(!$user_id){
     <div class="col-md-4">
 
       <table class="table table-bordered table-striped">
-
-
         <tr>
           <th colspan="2"><h4 class="text-center">User Info</h3></th>
 

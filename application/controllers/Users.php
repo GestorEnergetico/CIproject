@@ -13,7 +13,7 @@ public function __construct(){
 
 public function index()
 {
-$this->load->view("register.php");
+$this->load->view("register_view2.php");
 }
 
 public function register_user(){
@@ -40,14 +40,13 @@ else{
   $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
   redirect('user');
 
-
 }
 
 }
 
 public function login_view(){
 
-$this->load->view("login.php");
+$this->load->view("login_model.php");
 
 }
 
@@ -68,7 +67,7 @@ function login_user(){
         $this->session->set_userdata('user_age',$data['user_age']);
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
-        $this->load->view('user_profile.php');
+        $this->load->view('user_profile_view.php');
 
       }
       else{
@@ -76,8 +75,6 @@ function login_user(){
         $this->load->view("login.php");
 
       }
-
-
 }
 
 function user_profile(){
@@ -88,7 +85,7 @@ $this->load->view('user_profile.php');
 public function user_logout(){
 
   $this->session->sess_destroy();
-  redirect('user/login_view', 'refresh');
+  redirect('pages/login_view2', 'refresh');
 }
 
 }
