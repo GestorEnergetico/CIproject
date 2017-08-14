@@ -1,11 +1,16 @@
 <?php
 class User_model extends CI_model{
 
-public function register_user($user){
+  public function __construct(){
+      parent::__construct();
+  }
 
-$this->db->insert('user', $user);
-}
-public function login_user($email,$pass){
+  public function register_user($user){
+
+    $this->db->insert('user', $user);
+  }
+
+  public function login_user($email,$pass){
 
   $this->db->select('*');
   $this->db->from('user');
@@ -18,9 +23,9 @@ public function login_user($email,$pass){
   }
   else{
     return false;
+    }
   }
-}
-public function email_check($email){
+  public function email_check($email){
 
   $this->db->select('*');
   $this->db->from('user');
