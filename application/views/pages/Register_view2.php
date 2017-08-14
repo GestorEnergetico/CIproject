@@ -47,7 +47,7 @@
                           <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
                           </fieldset>
                       </form>
-                      <center><b>Already registered ?</b> <br></b><a href="<?php echo base_url('pages/login_view2'); ?>">Login here</a></center><!--for centered text-->
+                      <center><b>Already registered ?</b> <br></b><a href="<?php echo base_url('user/login_view2'); ?>">Login here</a></center><!--for centered text-->
                   </div>
               </div>
           </div>

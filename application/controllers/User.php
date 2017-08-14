@@ -2,18 +2,18 @@
 
 class User extends CI_Controller {
 
-public function __construct(){
+  public function __construct(){
 
         parent::__construct();
   			// $this->load->helper('url');
         // his->load->model('user_model');
         // $this->load->library('session');
-}
-public function index(){
-$this->load->view("pages/register_view2.php");
-}
+      }
+    public function index(){
+        $this->load->view("pages/register_view2.php");
+      }
 
-public function register_user(){
+    public function register_user(){
 
       $user=array(
       'user_name'=>$this->input->post('user_name'),
@@ -24,32 +24,31 @@ public function register_user(){
         );
         print_r($user);
 
-$email_check=$this->user_model->email_check($user['user_email']);
+        $email_check=$this->user_model->email_check($user['user_email']);
 
-if($email_check){
-  $this->user_model->register_user($user);
-  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
-  redirect('user/login_view');
+        if($email_check){
+          $this->user_model->register_user($user);
+          $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
+          redirect('user/login_view');
 
-}
-else{
+        }
+        else{
 
-  $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-  redirect('user');
-}
-}
+          $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
+          redirect('user');
+        }
+      }
 
-public function login_view(){
-$this->load->view("pages/login_view2.php");
-}
+      public function login_view(){
+        $this->load->view("pages/login_view2.php");
+      }
 
-function login_user(){
-  $user_login=array(
+      function login_user(){
+        $user_login=array(
 
-  'user_email'=>$this->input->post('user_email'),
-  'user_password'=>md5($this->input->post('user_password'))
-
-    );
+          'user_email'=>$this->input->post('user_email'),
+          'user_password'=>md5($this->input->post('user_password'))
+          );
 
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
       if($data)
@@ -68,15 +67,15 @@ function login_user(){
       }
 }
 
-function user_profile(){
+  function user_profile(){
 
-$this->load->view('pages/user_profile_view.php');
+    $this->load->view('pages/user_profile_view.php');
 
-}
-public function user_logout(){
+  }
+  public function user_logout(){
 
-  $this->session->sess_destroy();
-  redirect('pages/login_view2', 'refresh');
+    $this->session->sess_destroy();
+    redirect('pages/login_view2', 'refresh');
 }
 
 }
