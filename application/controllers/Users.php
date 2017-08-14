@@ -38,15 +38,11 @@ else{
 
   $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
   redirect('user');
-
 }
-
 }
 
 public function login_view(){
-
-$this->load->view("user_model.php");
-
+$this->load->view("login_view2.php");
 }
 
 function login_user(){
@@ -67,12 +63,10 @@ function login_user(){
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
         $this->load->view('user_profile_view.php');
-
       }
       else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-        $this->load->view("login.php");
-
+        $this->load->view("login_view2.php");
       }
 }
 
