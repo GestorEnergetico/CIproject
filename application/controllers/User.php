@@ -68,12 +68,10 @@ class User extends CI_Controller {
 }
 
   function user_profile(){
-
     $this->load->view('pages/user_profile_view.php');
 
   }
   public function user_logout(){
-
     $this->session->sess_destroy();
     redirect('pages/login_view2.php', 'refresh');
 }
