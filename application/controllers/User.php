@@ -5,9 +5,9 @@ class User extends CI_Controller {
   public function __construct(){
 
         parent::__construct();
-  			// $this->load->helper('url');
-        // his->load->model('user_model');
-        // $this->load->library('session');
+  			$this->load->helper('url');
+        $this->load->model('user_model');
+        $this->load->library('session');
       }
     public function index(){
         $this->load->view("pages/register_view2.php");
@@ -22,7 +22,7 @@ class User extends CI_Controller {
       'user_age'=>$this->input->post('user_age'),
       'user_mobile'=>$this->input->post('user_mobile')
         );
-        print_r($user);
+        // print_r($user);
 
         $email_check=$this->user_model->email_check($user['user_email']);
 
