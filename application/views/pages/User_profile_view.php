@@ -2,7 +2,6 @@
 // $user_id=$this->session->userdata('user_id');
 //
 // if(!$user_id){
-//
 //   redirect('pages/login_view2.php');
 // }
  ?>

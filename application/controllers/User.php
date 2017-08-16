@@ -47,7 +47,7 @@ class User extends CI_Controller {
       'user_password'=>md5($this->input->post('user_password'))
     );
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-
+    print_r($data);
     if($data){
       $this->session->set_userdata('user_id',$data['user_id']);
       $this->session->set_userdata('user_email',$data['user_email']);
@@ -55,7 +55,7 @@ class User extends CI_Controller {
       $this->session->set_userdata('user_age',$data['user_age']);
       $this->session->set_userdata('user_mobile',$data['user_mobile']);
       // view
-      $this->load->view('pages/User_profile_view.php');
+      // $this->load->view('pages/User_profile_view.php');
     }else{
       $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
       // view
