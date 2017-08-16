@@ -29,7 +29,7 @@ class User extends CI_Controller {
         if($email_check){
           $this->user_model->register_user($user);
           $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
-          redirect('pages/login_view2');
+          redirect('pages/login_view2.php');
 
         }
         else{
@@ -75,7 +75,7 @@ class User extends CI_Controller {
   public function user_logout(){
 
     $this->session->sess_destroy();
-    redirect('pages/login_view2', 'refresh');
+    redirect('pages/login_view2.php', 'refresh');
 }
 
 }
