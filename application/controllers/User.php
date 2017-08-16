@@ -59,7 +59,7 @@ class User extends CI_Controller {
         $this->session->set_userdata('user_age',$data['user_age']);
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
-        $this->load->view('user_profile_view.php');
+        $this->load->view('pages/user_profile_view.php');
       }
       else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
