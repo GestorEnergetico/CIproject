@@ -42,12 +42,13 @@ class User extends CI_Controller {
   }
 
   function login_user(){
+    print_r($data);
     $user_login=array(
       'user_email'=>$this->input->post('user_email'),
       'user_password'=>md5($this->input->post('user_password'))
     );
+    print_r($data);
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-    // print_r($data);
     if($data){
       $this->session->set_userdata('user_id',$data['user_id']);
       $this->session->set_userdata('user_email',$data['user_email']);
