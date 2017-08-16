@@ -73,7 +73,7 @@ class User extends CI_Controller {
   }
   public function user_logout(){
     $this->session->sess_destroy();
-    redirect('pages/login_view2.php', 'refresh');
+    redirect('user/login_view', 'refresh');
 }
 
 }
