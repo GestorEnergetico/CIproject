@@ -29,11 +29,9 @@ class User extends CI_Controller {
         if($email_check){
           $this->user_model->register_user($user);
           $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
-          redirect('user/login_user');
+          redirect('user/login_view');
 
-        }
-        else{
-
+        }else{
           $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
           redirect('user');
         }
@@ -45,7 +43,6 @@ class User extends CI_Controller {
 
       function login_user(){
         $user_login=array(
-
           'user_email'=>$this->input->post('user_email'),
           'user_password'=>md5($this->input->post('user_password'))
           );
