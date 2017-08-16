@@ -48,19 +48,17 @@ class User extends CI_Controller {
     );
 
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-    if($data)
-    {
+    if($data){
       $this->session->set_userdata('user_id',$data['user_id']);
       $this->session->set_userdata('user_email',$data['user_email']);
       $this->session->set_userdata('user_name',$data['user_name']);
       $this->session->set_userdata('user_age',$data['user_age']);
       $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
-      $this->load->view('user/user_profile');
-    }
-    else{
+      redirect('user/user_profile');
+    }else{
       $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-      $this->load->view("pages/login_view2.php");
+      redirect("user/login_view");
     }
   }
 
