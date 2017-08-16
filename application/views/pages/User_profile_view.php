@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td>User Email</td>
-            <td><?php echo $this->session->userdata('user_email');  ?></td>
+            <td><?php echo $this->session->userdata('user_id');  ?></td>
           </tr>
           <tr>
             <td>User Age</td>
