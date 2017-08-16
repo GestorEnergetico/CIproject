@@ -63,7 +63,7 @@ class User extends CI_Controller {
   }
 
   function user_profile(){
-    $this->load->view('pages/user_profile_view.php');
+    $this->load->view('pages/User_profile_view.php');
 
   }
   public function user_logout(){
