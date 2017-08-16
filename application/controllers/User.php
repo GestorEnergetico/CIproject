@@ -38,7 +38,7 @@ class User extends CI_Controller {
   }
 
   public function login_view(){
-    $this->load->view("pages/login_view2.php");
+    $this->load->view("pages/Login_view2.php");
   }
 
   function login_user(){
