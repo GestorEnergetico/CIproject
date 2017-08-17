@@ -13,7 +13,7 @@ class User extends CI_Controller {
     if($this->session->has_userdata("user_email")){
       $this->load->view("pages/dashboard.php");
     }else{
-      $this->load->view("pages/Login_view2.php");
+      $this->load->view("pages/Login.php");
     }
   }
 
@@ -33,7 +33,7 @@ class User extends CI_Controller {
     if($email_check){
       $this->user_model->register_user($user);
       $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
-      redirect('user/login_view');
+      redirect('user/login');
 
     }else{
       $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
@@ -55,53 +55,53 @@ class User extends CI_Controller {
         $this->session->set_userdata('user_age',$data['user_age']);
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
         // view
-        $this->load->view('pages/User_profile_view.php');
+        $this->load->view('pages/Profile.php');
       }else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
         // view
-        $this->load->view("pages/Login_view2.php");
+        $this->load->view("pages/Login.php");
       }
     }else{
-      $this->load->view("pages/Login_view2.php");
+      $this->load->view("pages/Login.php");
     }
 
   }
-  public function login_view(){
-    $this->load->view("pages/Login_view2.php");
-  }
-
-  function login_user(){
-    $user_login=array(
-      'user_email'=>$this->input->post('user_email'),
-      'user_password'=>md5($this->input->post('user_password'))
-    );
-    $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-    if($data){
-      $this->session->set_userdata('user_id',$data['user_id']);
-      $this->session->set_userdata('user_email',$data['user_email']);
-      $this->session->set_userdata('user_name',$data['user_name']);
-      $this->session->set_userdata('user_age',$data['user_age']);
-      $this->session->set_userdata('user_mobile',$data['user_mobile']);
-      // view
-      $this->load->view('pages/User_profile_view.php');
-    }else{
-      $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-      // view
-      $this->load->view("pages/Login_view2.php");
-    }
-  }
+  // public function login_view(){
+  //   $this->load->view("pages/Login.php");
+  // }
+  //
+  // function login_user(){
+  //   $user_login=array(
+  //     'user_email'=>$this->input->post('user_email'),
+  //     'user_password'=>md5($this->input->post('user_password'))
+  //   );
+  //   $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
+  //   if($data){
+  //     $this->session->set_userdata('user_id',$data['user_id']);
+  //     $this->session->set_userdata('user_email',$data['user_email']);
+  //     $this->session->set_userdata('user_name',$data['user_name']);
+  //     $this->session->set_userdata('user_age',$data['user_age']);
+  //     $this->session->set_userdata('user_mobile',$data['user_mobile']);
+  //     // view
+  //     $this->load->view('pages/Profile.php');
+  //   }else{
+  //     $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
+  //     // view
+  //     $this->load->view("pages/Login.php");
+  //   }
+  // }
 
   function user_profile(){
-    $this->load->view('pages/User_profile_view.php');
+    $this->load->view('pages/Profile.php');
 
   }
   function alumnos($id){
-    // $this->load->view('pages/User_profile_view.php');
+    // $this->load->view('pages/Profile.php');
   }
 
   public function user_logout(){
     $this->session->sess_destroy();
-    redirect('user/login_view', 'refresh');
+    redirect('user/login', 'refresh');
   }
 
 }
