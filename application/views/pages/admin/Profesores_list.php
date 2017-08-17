@@ -8,7 +8,7 @@
     <?php
     $out = '';
       foreach ($result as $key => $value) {
-        $out .= $key . " - " . $value["fk_id_rols_users"] . "<br/>";
+        $out .= $key . " - " . $value["fk_id_people_profile"] . "<br/>";
       }
       echo $out;
     ?>
