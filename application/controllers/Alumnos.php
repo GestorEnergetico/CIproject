@@ -13,7 +13,7 @@ class Alumnos extends CI_Controller{
   public function index()  {
     $data = array();
     $data["result"] = $this->alumnos_model->get_all();
-    $this->load->view('admin/Alumnos_list', $data);
+    $this->load->view('pages/admin/Alumnos_list', $data);
 
 
     //     $conn = mysqli_connect($devadmin_lara, $devadmin_lara, $123456789, $dbname);
