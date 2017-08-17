@@ -5,13 +5,12 @@ class Alumnos extends CI_Controller{
   function __construct()
   {
     $this->load->helper('url');
-    $this->load->model('user_model');
+    $this->load->model('alumnos_model');
     $this->load->library('session');
   }
 
   public function index()  {
     $data = array();
-    $this->load->model('Alumnos_model');
     $data["result"] = $this->Alumnos_model->get_all();
     $this->load->view('admin/Alumnos_list', $data);
 
