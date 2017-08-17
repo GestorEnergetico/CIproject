@@ -11,7 +11,7 @@ class User extends CI_Controller {
   }
   public function index(){
     if($this->session->has_userdata("user_email")){
-      $this->load->view("pages/dashboard.php");
+      $this->load->view("pages/Dashboard.php");
     }else{
       $this->load->view("pages/Login.php");
     }
