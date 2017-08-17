@@ -12,6 +12,6 @@ class Profes extends CI_Controller{
   public function index()  {
     $data = array();
     $data["result"] = $this->profes_model->get_all();
-    $this->load->view('pages/admin/Profes_list', $data);
+    $this->load->view('pages/admin/profes_list', $data);
   }
 }
