@@ -9,7 +9,7 @@ class Alumnos_model extends CI_model{
     $this->db->select('*');
     $this->db->from('users');
     $query = $this->db->get();
-    return $result = $query->result();
+    return $result = $query->result_array();
   }
 
 
