@@ -11,3 +11,4 @@ class Alumnos_model extends CI_model{
     $query = $this->db->get();
     return $result = $query->result_array();
   }
+}
