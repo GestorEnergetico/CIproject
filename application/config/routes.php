@@ -54,6 +54,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $route['translate_uri_dashes'] = FALSE;
 // $route['(:any)'] = '$1';
 
-
 $route['default_controller'] = 'user';
+
 $route['login'] = 'user/login';
+$route['logout'] = 'user/logout';
+
+$route['/'] = 'main/dashboard';
+
+$route['alumnos'] = 'user/alumnos';
+$route['alumnos/(:num)'] = 'user/alumnos/$1';
+
+$route['profesores'] = 'user/profesores';
+$route['profesores/(:num)'] = 'user/profesores/$1';
+
+
+
+
+
+
+
+//

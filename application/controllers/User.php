@@ -10,7 +10,12 @@ class User extends CI_Controller {
     $this->load->library('session');
   }
   public function index(){
-    $this->load->view("pages/register_view2.php");
+    echo $this->session->has_userdata("user_email") . " - " . "res";
+    if(true){
+      // $this->load->view("pages/dashboard.php");
+    }else{
+      // $this->load->view("pages/Login_view2.php");
+    }
   }
 
   public function register_user(){
@@ -91,6 +96,10 @@ class User extends CI_Controller {
     $this->load->view('pages/User_profile_view.php');
 
   }
+  function alumnos($id){
+    // $this->load->view('pages/User_profile_view.php');
+  }
+
   public function user_logout(){
     $this->session->sess_destroy();
     redirect('user/login_view', 'refresh');
