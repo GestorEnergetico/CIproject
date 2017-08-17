@@ -59,7 +59,7 @@ $route['default_controller'] = 'user';
 $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';
 
-$route['/'] = 'main/dashboard';
+// $route['/'] = 'main/dashboard';
 
 // $route['alumnos'] = 'alumnos';
 $route['alumnos/(:num)'] = '/alumnos/$1';
