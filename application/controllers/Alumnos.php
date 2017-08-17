@@ -2,7 +2,7 @@
 
 class Alumnos extends CI_Controller{
 
-  function __construct(argument)
+  function __construct()
   {
     $this->load->helper('url');
     $this->load->model('user_model');
