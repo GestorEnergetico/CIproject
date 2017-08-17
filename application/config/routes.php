@@ -61,11 +61,11 @@ $route['logout'] = 'user/logout';
 
 $route['/'] = 'main/dashboard';
 
-$route['alumnos'] = 'user/alumnos';
-$route['alumnos/(:num)'] = 'user/alumnos/$1';
+// $route['alumnos'] = 'alumnos';
+$route['alumnos/(:num)'] = '/alumnos/$1';
 
-$route['profesores'] = 'user/profesores';
-$route['profesores/(:num)'] = 'user/profesores/$1';
+// $route['profesores'] = 'profesores';
+$route['profesores/(:num)'] = '/profesores/$1';
 
 
 

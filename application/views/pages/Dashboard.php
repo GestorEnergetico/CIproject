@@ -16,11 +16,11 @@
       <a href="/alumnos/create">nuevo</a>
     </li>
     <li>
-      <a href="/profesores">alumnos</a><br>
+      <a href="/profesores">profesores</a><br>
       <a href="/profesores/create">nuevo</a>
     </li>
     <li>
-      <a href="/aulas">alumnos</a><br>
+      <a href="/aulas">aulas</a><br>
       <a href="/aulas/create">nuevo</a>
     </li>
   </ul>
