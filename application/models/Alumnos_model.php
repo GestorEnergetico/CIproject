@@ -27,3 +27,4 @@ class Alumnos_model extends CI_model{
         }
 
 }
+}
