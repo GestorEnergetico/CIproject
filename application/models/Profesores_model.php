@@ -8,6 +8,7 @@ class Profesores_model extends CI_model{
   public function get_all(){
     $this->db->select('*');
     $this->db->from('users');
+    $this->db->where('fk_id_rols_users', '2');
     $query = $this->db->get();
     return $result = $query->result_array();
   }

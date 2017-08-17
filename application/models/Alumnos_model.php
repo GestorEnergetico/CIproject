@@ -8,6 +8,7 @@ class Alumnos_model extends CI_model{
   public function get_all(){
     $this->db->select('*');
     $this->db->from('users');
+    $this->db->where('fk_id_rols_users', '1');
     $query = $this->db->get();
     return $result = $query->result_array();
   }
@@ -18,7 +19,7 @@ class Alumnos_model extends CI_model{
      $query=$this->db->insert('user');
       return $query;
     }
-    
+
     public function users_exists(){
         $this->db->where('Username', $this->input->post('Username'));
         $query = $this->db->get('employee');
