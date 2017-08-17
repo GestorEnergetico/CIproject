@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Alumnos</title>
+    <title>Profes</title>
   </head>
   <body>
     <?php
