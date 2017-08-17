@@ -10,11 +10,10 @@ class User extends CI_Controller {
     $this->load->library('session');
   }
   public function index(){
-    echo $this->session->has_userdata("user_email") . " - " . "res";
-    if(true){
-      // $this->load->view("pages/dashboard.php");
+    if($this->session->has_userdata("user_email")){
+      $this->load->view("pages/dashboard.php");
     }else{
-      // $this->load->view("pages/Login_view2.php");
+      $this->load->view("pages/Login_view2.php");
     }
   }
 
