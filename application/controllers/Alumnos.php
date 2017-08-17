@@ -12,7 +12,7 @@ class Alumnos extends CI_Controller{
 
   public function index()  {
     $data = array();
-    $data["result"] = $this->Alumnos_model->get_all();
+    $data["result"] = $this->alumnos_model->get_all();
     $this->load->view('admin/Alumnos_list', $data);
 
 
