@@ -14,31 +14,39 @@ class Alumnos extends CI_Controller{
     $data = array();
     $data["result"] = $this->alumnos_model->get_all();
     $this->load->view('pages/admin/Alumnos_list', $data);
+  }
 
+  public function adduser()
+  {
+    $this->load->library('form_validation');
+    $this->load->helper('security');
 
-    //     $conn = mysqli_connect($devadmin_lara, $devadmin_lara, $123456789, $dbname);
-    // // Check connection
-    //     if (!$conn) {
-    //       die("Connection failed: " . mysqli_connect_error());
-    //     }
+    $this->form_validation->set_rules('user_name','User_name','required|min_length[4]|trim|callback_users_exist|xss_clean');
+    $this->form_validation->set_rules('user_email','User_email','trim|required|min_length[6]|max_length[50]|matches[password_conf]|md5|trim|xss_clean');
+    $this->form_validation->set_rules('user_password','User_password','trim|required|min_length[6]|max_length[50]|matches[password_conf]|md5|trim|xss_clean');
+
+    // $email_check=$this->alumnos_model->email_check($user['user_email']);
     //
-    //   $sql = "SELECT id, users, FROM Users";
-    //   $result = mysqli_query($conn, $sql);
+    // if($email_check){
+    //   $this->alumnos_model->register_user($user);
+    //   $this->session->set_flashdata('success_msg', 'User add.');
+    //   redirect('user/login');
     //
-    //   if (mysqli_num_rows($result) > 0) {
-    //     // output data of each row
-    //     while($row = mysqli_fetch_assoc($result)) {
-    //         echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-    //     }
-    //   } else {
-    //     echo "0 results";
-    //   }
-    //
-    // mysqli_close($conn);
-    //
-    //   }
+    // }else{
+    //   $this->session->set_flashdata('error_msg', 'User Already Existed.');
+    //   redirect('user');
+    // }
+  }
+  public function users_exists()
+  {
+    $this->load->model('model_emp');
+    if ($this->model_emp->users_exists())
+    {
+      return true;
+    }else
+    {
+      $this->form_validation->set_message('users_exists','User Already Existed.');
+      return false;
+    }
   }
 }
-
-
-?>
