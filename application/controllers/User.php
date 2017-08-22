@@ -1,6 +1,17 @@
 <?php
+/**
+*
+*/
+interface test
+{
+  public function index();
+  public function create();
+  public function edit();
+  public function delete();
 
-class User extends CI_Controller {
+}
+
+class User extends CI_Controller implements test {
 
   public function __construct(){
 
@@ -15,6 +26,15 @@ class User extends CI_Controller {
     }else{
       $this->load->view("pages/Login.php");
     }
+  }
+  public function create(){
+    
+  }
+  public function edit(){
+
+  }
+  public function delete(){
+
   }
 
   public function register_user(){
