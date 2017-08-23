@@ -20,9 +20,9 @@ class Settings extends CI_Controller{
     $data["result"] = $this->settings_model->get_editions();
     $this->load->view('pages/admin/Settings_editions', $data);
   }
-  public function services($id) {
+  public function services() {
     $data = array();
-    $data["result"] = $this->settings_model->get_services($id);
+    $data["result"] = $this->settings_model->get_services();
     $this->load->view('pages/admin/Settings_services', $data);
   }
 
