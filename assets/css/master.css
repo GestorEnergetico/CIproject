@@ -1,0 +1,124 @@
+/*------ General -------*/
+/**:active,*/
+/**:hover,*/
+/**:focus,*/
+*{
+  padding:0;
+  margin:0;
+  /*border: none;*/
+  /*outline: none;*/
+}
+a:hover,
+a:focus,
+a:visited,
+a{
+  color: inherit;
+  text-decoration: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html{
+  height: 100%;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  min-height: 100%;
+}
+
+/*------ /General -------*/
+/*------ Header -------*/
+header{
+  width: 270px;
+  margin: 0 auto;
+}
+header img{
+  height: 120px;
+}
+header .lnr-menu{
+  font-size: 20px;
+}
+header .dropdown .btn{
+  background: #fff;
+}
+header .logo,
+header .dropdown{
+  display: inline-block;
+}
+
+header .btn:active,
+header .btn:active:focus,
+header .btn:focus,
+header .dropdown:focus{
+  box-shadow: none;
+  border-color: #FFF;
+  outline: none;
+}
+/*------ /Header -------*/
+/*------ Sidebar -------*/
+nav{}
+  nav ul{
+    list-style: none;
+  }
+  nav ul li{
+    float: left;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    /*text-align: center;*/
+  }
+  nav ul li a{
+    font-size: 20px;
+    padding: 10px 0;
+    padding-left: 25%;
+    display: block;
+  }
+  nav ul li a:hover{
+    text-decoration: none;
+    opacity: 0.7;
+  }
+  /*------ /Sidebar -------*/
+  /*------ Footer -------*/
+  footer{
+    clear: both;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    line-height: 60px;
+    border-top: 1px solid #007c91 ;
+    color: #007c91;
+  }
+  /*------ /Footer -------*/
+  @media (min-width: 992px) {
+
+    /*------ Sidebar -------*/
+    nav{}
+      nav ul{
+        list-style: none;
+      }
+      nav ul li{
+        border-right: 1px solid #ccc;
+        border-bottom: none;
+        float: none;
+        /*text-align: center;*/
+      }
+      nav ul li a{
+        font-size: 20px;
+        padding: 10px 0;
+        padding-left: 25%;
+        display: block;
+      }
+      nav ul li a:hover{
+        text-decoration: none;
+        opacity: 0.7;
+      }
+      /*------ /Sidebar -------*/
+      /*------ Footer -------*/
+      footer{
+        text-align: center;
+      }
+      /*------ /Footer -------*/
+    }

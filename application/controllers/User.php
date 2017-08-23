@@ -22,13 +22,14 @@ class User extends CI_Controller implements test {
   }
   public function index(){
     if($this->session->has_userdata("user_email")){
-      $this->load->view("pages/Dashboard.php");
+      $this->data['middle'] = 'pages/Dashboard.php';
+      $this->load->view('includes/template',$this->data);
     }else{
       $this->load->view("pages/Login.php");
     }
   }
   public function create(){
-    
+
   }
   public function edit(){
 
