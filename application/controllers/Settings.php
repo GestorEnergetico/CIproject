@@ -12,23 +12,23 @@ class Settings extends CI_Controller{
 
   public function index(){
     $data = array();
-    $this->load->view('pages/admin/settings_view', $data);
+    $this->load->view('pages/admin/settings_index', $data);
   }
 
   public function editions() {
     $data = array();
     $data["result"] = $this->settings_model->get_editions();
-    $this->load->view('pages/admin/Alumnos_create', $data);
+    $this->load->view('pages/admin/settings_editions', $data);
   }
   public function services($id) {
     $data = array();
     $data["result"] = $this->settings_model->get_services($id);
-    $this->load->view('pages/admin/Alumnos_create', $data);
+    $this->load->view('pages/admin/settings_services', $data);
   }
 
   public function add_editions() {
     $data = array();
-    $this->load->view('pages/admin/Alumnos_create', $data);
+    $this->load->view('pages/', $data);
     // $editions=array(
     //   'user_name'=>$this->input->post('user_name'),
     //   'user_email'=>$this->input->post('user_email'),
@@ -40,7 +40,7 @@ class Settings extends CI_Controller{
 
   public function add_services() {
     $data = array();
-    $this->load->view('pages/admin/Alumnos_create', $data);
+    $this->load->view('pages/', $data);
     // $this->load->library('form_validation');
     // $this->load->helper('security');
     // $this->form_validation->set_rules('id_servicio','Id_servicio','required|min_length[4]|trim|callback_users_exist|xss_clean');
