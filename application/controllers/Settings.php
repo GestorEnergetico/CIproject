@@ -11,26 +11,26 @@ class Settings extends CI_Controller{
   }
 
   public function index(){
-    $data = array();
+    $this->data = array();
     $this->data['middle'] = 'pages/admin/Settings_index';
     $this->load->view('template',$this->data);
   }
 
   public function editions() {
-    $data = array();
-    $data["result"] = $this->settings_model->get_editions();
+    $this->data = array();
+    $this->data["result"] = $this->settings_model->get_editions();
     $this->data['middle'] = 'pages/admin/Settings_editions';
     $this->load->view('template',$this->data);
   }
   public function services() {
-    $data = array();
-    $data["result"] = $this->settings_model->get_services();
+    $this->data = array();
+    $this->data["result"] = $this->settings_model->get_services();
     $this->data['middle'] = 'pages/admin/Settings_services';
     $this->load->view('template',$this->data);
   }
 
   public function add_editions() {
-    $data = array();
+    $this->data = array();
     $this->data['middle'] = 'pages/';
     $this->load->view('template',$this->data);
     // $editions=array(
@@ -43,8 +43,8 @@ class Settings extends CI_Controller{
   }
 
   public function add_services() {
-    $data = array();
-    $this->load->view('pages/', $data);
+    $this->data = array();
+    $this->load->view('pages/', $this->data);
     // $this->load->library('form_validation');
     // $this->load->helper('security');
     // $this->form_validation->set_rules('id_servicio','Id_servicio','required|min_length[4]|trim|callback_users_exist|xss_clean');

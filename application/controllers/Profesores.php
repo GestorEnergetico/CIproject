@@ -10,8 +10,8 @@ class Profesores extends CI_Controller{
   }
 
   public function index()  {
-    $data = array();
-    $data["result"] = $this->profesores_model->get_all();
+    $this->data = array();
+    $this->data["result"] = $this->profesores_model->get_all();
     $this->data['middle'] = 'pages/admin/Profesores_list';
     $this->load->view('template',$this->data);
   }

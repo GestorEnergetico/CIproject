@@ -11,27 +11,27 @@ class Alumnos extends CI_Controller{
   }
 
   public function index()  {
-    $data = array();
+    $this->data = array();
     $this->data['middle'] = 'pages/admin/Alumnos_list';
     $this->load->view('template',$this->data);
   }
 
   public function create()  {
-    $data["result"] = $this->alumnos_model->get_all();
+    $this->data["result"] = $this->alumnos_model->get_all();
     $this->data['middle'] = 'pages/admin/Alumnos_create';
     $this->load->view('template',$this->data);
   }
   public function edit($id)  {
-    $data["result"] = $this->alumnos_model->get_id($id);
+    $this->data["result"] = $this->alumnos_model->get_id($id);
     $this->data['middle'] = 'pages/admin/Alumnos_create';
     $this->load->view('template',$this->data);
   }
   public function delete($id)  {
-    $data["result"] = $this->alumnos_model->del_id($id);
-    $data["msg_box"] = "Ha habido un error";
-    if($data["result"] == true){
-      $data["msg_box"] = "Se ha eliminado correctamente";
-      // $this->load->view('pages/admin/Alumnos_list', $data);
+    $this->data["result"] = $this->alumnos_model->del_id($id);
+    $this->data["msg_box"] = "Ha habido un error";
+    if($this->data["result"] == true){
+      $this->data["msg_box"] = "Se ha eliminado correctamente";
+      // $this->load->view('pages/admin/Alumnos_list', $this->data);
       // redirec
     }
   }
