@@ -12,18 +12,18 @@ class Settings extends CI_Controller{
 
   public function index(){
     $data = array();
-    $this->load->view('pages/admin/settings_index', $data);
+    $this->load->view('pages/admin/Settings_index', $data);
   }
 
   public function editions() {
     $data = array();
     $data["result"] = $this->settings_model->get_editions();
-    $this->load->view('pages/admin/settings_editions', $data);
+    $this->load->view('pages/admin/Settings_editions', $data);
   }
   public function services($id) {
     $data = array();
     $data["result"] = $this->settings_model->get_services($id);
-    $this->load->view('pages/admin/settings_services', $data);
+    $this->load->view('pages/admin/Settings_services', $data);
   }
 
   public function add_editions() {
