@@ -47,5 +47,4 @@ class Settings extends CI_Controller{
     // $this->form_validation->set_rules('name_service','Name_service','required|min_length[4]|trim|callback_users_exist|xss_clean');
     // $this->form_validation->set_rules('price_service','Price_service','required|min_length[4]|trim|callback_users_exist|xss_clean');
   }
-
- ?>
+}
