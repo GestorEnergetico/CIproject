@@ -23,7 +23,7 @@ class User extends CI_Controller implements test {
   public function index(){
     if($this->session->has_userdata("user_email")){
       $this->data['middle'] = 'pages/Dashboard.php';
-      $this->load->view('includes/template',$this->data);
+      $this->load->view('template',$this->data);
     }else{
       $this->load->view("pages/Login.php");
     }
