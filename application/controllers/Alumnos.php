@@ -12,16 +12,19 @@ class Alumnos extends CI_Controller{
 
   public function index()  {
     $data = array();
-    $this->load->view('pages/admin/Alumnos_list', $data);
+    $this->data['middle'] = 'pages/admin/Alumnos_list';
+    $this->load->view('template',$this->data);
   }
 
   public function create()  {
     $data["result"] = $this->alumnos_model->get_all();
-    $this->load->view('pages/admin/Alumnos_create', $data);
+    $this->data['middle'] = 'pages/admin/Alumnos_create';
+    $this->load->view('template',$this->data);
   }
   public function edit($id)  {
     $data["result"] = $this->alumnos_model->get_id($id);
-    $this->load->view('pages/admin/Alumnos_create', $data);
+    $this->data['middle'] = 'pages/admin/Alumnos_create';
+    $this->load->view('template',$this->data);
   }
   public function delete($id)  {
     $data["result"] = $this->alumnos_model->del_id($id);

@@ -12,23 +12,27 @@ class Settings extends CI_Controller{
 
   public function index(){
     $data = array();
-    $this->load->view('pages/admin/Settings_index', $data);
+    $this->data['middle'] = 'pages/admin/Settings_index';
+    $this->load->view('template',$this->data);
   }
 
   public function editions() {
     $data = array();
     $data["result"] = $this->settings_model->get_editions();
-    $this->load->view('pages/admin/Settings_editions', $data);
+    $this->data['middle'] = 'pages/admin/Settings_editions';
+    $this->load->view('template',$this->data);
   }
   public function services() {
     $data = array();
     $data["result"] = $this->settings_model->get_services();
-    $this->load->view('pages/admin/Settings_services', $data);
+    $this->data['middle'] = 'pages/admin/Settings_services';
+    $this->load->view('template',$this->data);
   }
 
   public function add_editions() {
     $data = array();
-    $this->load->view('pages/', $data);
+    $this->data['middle'] = 'pages/';
+    $this->load->view('template',$this->data);
     // $editions=array(
     //   'user_name'=>$this->input->post('user_name'),
     //   'user_email'=>$this->input->post('user_email'),

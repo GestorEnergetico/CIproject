@@ -12,5 +12,6 @@ class Admin extends CI_Controller{
   public function index()  {
     $data = array();
     $data["result"] = $this->alumnos_model->get_all();
-    $this->load->view('pages/admin/admin_list', $data);
+    $this->data['middle'] = 'pages/admin/admin_list';
+    $this->load->view('template',$this->data);
   }

@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>settings editions</title>
-  </head>
-  <body>
+
     <?php
     $out = '';
       foreach ($result as $key => $value) {
@@ -12,5 +6,3 @@
       }
       echo $out;
     ?>
-  </body>
-</html>

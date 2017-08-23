@@ -12,6 +12,7 @@ class Aulas extends CI_Controller{
   public function index()  {
     $data = array();
     $data["result"] = $this->aulas_model->get_all();
-    $this->load->view('pages/admin/Aulas_list', $data);
+    $this->data['middle'] = 'pages/admin/Aulas_list';
+    $this->load->view('template',$this->data);
   }
 }
