@@ -56,13 +56,11 @@ class User extends CI_Controller{
         'password_user'=>md5($this->input->post('user_password')),
         'passphrase_user'=>$this->input->post('user_password')
       );
-      $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
+      $data=$this->user_model->login_user($user_login['email_user'],$user_login['password_user']);
       if($data){
-        $this->session->set_userdata('user_id',$data['user_id']);
-        $this->session->set_userdata('user_email',$data['user_email']);
-        $this->session->set_userdata('user_name',$data['user_name']);
-        $this->session->set_userdata('user_age',$data['user_age']);
-        $this->session->set_userdata('user_mobile',$data['user_mobile']);
+        $this->session->set_userdata('id_user',$data['id_user']);
+        $this->session->set_userdata('email_user',$data['email_user']);
+        $this->session->set_userdata('passphrase_user',$data['passphrase_user']);
         // view
         $this->load->view('pages/Login.php');
       }else{
