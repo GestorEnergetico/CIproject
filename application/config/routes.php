@@ -57,13 +57,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*    Basic routes    */
 $route['default_controller'] = 'user';
 /*    /Basic routes    */
+$route['user/user_logout'] = '/logout';
 
 
 /*    Test routes    */
 
 
 $route['login'] = '/user/login';
-$route['logout'] = '/user/user_logout';
 
 // $route['/'] = 'main/dashboard';
 
