@@ -83,7 +83,7 @@ class User extends CI_Controller implements test {
         $this->load->view("pages/Login.php");
       }
     }else{
-      $this->load->view("template.php");
+      $this->load->view("pages/Login.php");
     }
 
   }
