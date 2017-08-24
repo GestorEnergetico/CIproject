@@ -76,7 +76,7 @@ class User extends CI_Controller implements test {
         $this->session->set_userdata('user_age',$data['user_age']);
         $this->session->set_userdata('user_mobile',$data['user_mobile']);
         // view
-        $this->load->view('views/template.php');
+        $this->load->view('views/Login.php');
       }else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
         // view
