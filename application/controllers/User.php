@@ -10,7 +10,7 @@ class User extends CI_Controller{
     $this->load->library('session');
   }
   public function index(){
-    if($this->session->has_userdata("user_email")){
+    if($this->session->has_userdata("email_user")){
       $this->data['middle'] = 'pages/Dashboard.php';
       $this->load->view('template',$this->data);
     }else{
