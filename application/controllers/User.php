@@ -32,7 +32,8 @@ class User extends CI_Controller{
     $user=array(
       'email_user'=>$this->input->post('user_email'),
       'password_user'=>md5($this->input->post('user_password')),
-      'passphrase_user'=>$this->input->post('user_password')
+      'passphrase_user'=>$this->input->post('user_password'),
+      'fk_role'=>$this->input->post('fk_role')
     );
 
     $email_check=$this->user_model->email_check($user['email_user']);

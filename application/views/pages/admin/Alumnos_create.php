@@ -23,7 +23,7 @@
 
         <div class="form-group">
           <input class="form-control" placeholder="Password" name="user_password" type="password" required value="">
-          <input class="hidden" placeholder="Password" name="fk_role" type="number"  value="1">
+          <input class="hidden" name="fk_role" type="number"  value="1">
         </div>
 
         <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
