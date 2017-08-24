@@ -54,7 +54,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $route['translate_uri_dashes'] = FALSE;
 // $route['(:any)'] = '$1';
 
+/*    Basic routes    */
 $route['default_controller'] = 'user';
+/*    /Basic routes    */
+
+
+/*    Test routes    */
+
 
 $route['login'] = '/user/login';
 $route['logout'] = '/user/user_logout';

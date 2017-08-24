@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Index</title>
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="assets/css/linearicons-free.css">
-  <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/assets/css/linearicons-free.css">
+  <link rel="stylesheet" href="/assets/css/master.css">
 </head>
 <body>
   <!-- header -->

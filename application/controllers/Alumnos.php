@@ -17,7 +17,6 @@ class Alumnos extends CI_Controller{
   }
 
   public function create()  {
-    $this->data["result"] = $this->alumnos_model->get_all();
     $this->data['middle'] = 'pages/admin/Alumnos_create';
     $this->load->view('template',$this->data);
   }
