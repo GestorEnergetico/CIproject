@@ -59,6 +59,8 @@ $route['default_controller'] = 'user';
 $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';
 
+$route['dashboard'] = 'user/login/dashboard';
+
 // $route['/'] = 'main/dashboard';
 
 // $route['alumnos'] = 'alumnos';
