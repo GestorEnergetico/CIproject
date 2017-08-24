@@ -16,7 +16,7 @@
     </div>
     <div class="dropdown">
       <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-        <img src="assets/img/logo_ge.png" alt="profile" class="img-circle">
+        <img src="/assets/img/logo_ge.png" alt="profile" class="img-circle">
         <span class="lnr lnr-menu"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#">Contacta</a></li>
