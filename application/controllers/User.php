@@ -80,7 +80,7 @@ class User extends CI_Controller implements test {
       }else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
         // view
-        $this->load->view("pages/Login.php");
+        $this->load->view("views/Template.php");
       }
     }else{
       $this->load->view("pages/Login.php");
