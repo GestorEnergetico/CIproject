@@ -1,17 +1,6 @@
 <?php
-/**
-*
-*/
-interface test
-{
-  public function index();
-  public function create();
-  public function edit();
-  public function delete();
 
-}
-
-class User extends CI_Controller implements test {
+class User extends CI_Controller{
 
   public function __construct(){
 
