@@ -59,8 +59,6 @@ $route['default_controller'] = 'user';
 $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';
 
-$route['dashboard'] = 'user/dashboard';
-
 // $route['/'] = 'main/dashboard';
 
 // $route['alumnos'] = 'alumnos';
@@ -69,6 +67,7 @@ $route['alumnos/(:num)'] = '/alumnos/$1';
 // $route['profesores'] = 'profesores';
 $route['profesores/(:num)'] = '/profesores/$1';
 $route['aulas/(:num)'] = '/aulas/$1';
+
 
 $route['settings/add_editions'] = '/settings/editions/new';
 $route['settings/add_services'] = '/settings/services/new';
