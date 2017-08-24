@@ -36,7 +36,7 @@ class User extends CI_Controller{
     );
     // print_r($user);
 
-    $email_check=$this->user_model->email_check($user['user_email']);
+    $email_check=$this->user_model->email_check($user['email_user']);
 
     if($email_check){
       $this->user_model->register_user($user);
