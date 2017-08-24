@@ -41,11 +41,9 @@ class User extends CI_Controller implements test {
   public function register_user(){
 
     $user=array(
-      'user_name'=>$this->input->post('user_name'),
-      'user_email'=>$this->input->post('user_email'),
-      'user_password'=>md5($this->input->post('user_password')),
-      'user_age'=>$this->input->post('user_age'),
-      'user_mobile'=>$this->input->post('user_mobile')
+      'email_user'=>$this->input->post('user_email'),
+      'password_user'=>md5($this->input->post('user_password')),
+      'passphrase_user'=>$this->input->post('user_password')
     );
     // print_r($user);
 
@@ -65,8 +63,9 @@ class User extends CI_Controller implements test {
   public function login(){
     if($this->input->post()){
       $user_login=array(
-        'user_email'=>$this->input->post('user_email'),
-        'user_password'=>md5($this->input->post('user_password'))
+        'email_user'=>$this->input->post('user_email'),
+        'password_user'=>md5($this->input->post('user_password')),
+        'passphrase_user'=>$this->input->post('user_password')
       );
       $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
       if($data){
