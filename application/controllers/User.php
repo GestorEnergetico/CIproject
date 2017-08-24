@@ -56,7 +56,10 @@ class User extends CI_Controller{
         'password_user'=>md5($this->input->post('user_password')),
         'passphrase_user'=>$this->input->post('user_password')
       );
+      print_r($this->input->post());
+      echo "<hr>";
       $data=$this->user_model->login_user($user_login['email_user'],$user_login['password_user']);
+      print_r($data);
       if($data){
         $this->session->set_userdata('id_user',$data['id_user']);
         $this->session->set_userdata('email_user',$data['email_user']);
