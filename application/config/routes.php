@@ -64,9 +64,12 @@ $route['settings/editions/new'] = 'settings/add_editions';
 $route['settings/services/new'] = 'settings/add_services';
 /*    /Settings routes    */
 
+/*    Alumnos routes    */
+$route['alumnos/(:num)'] = 'alumnos/profile/$1';
+$route['alumnos/(:num)/edit'] = 'alumnos/edit_profile/$1';
+/*    /Alumnos routes    */
 
 /*    Test routes    */
-$route['alumnos/(:num)'] = 'alumnos/profile/$1';
 
 
 // $route['user/user_logout'] = '/logout';

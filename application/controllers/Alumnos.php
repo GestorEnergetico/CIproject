@@ -23,6 +23,11 @@ class Alumnos extends CI_Controller{
     $this->data['middle'] = 'pages/admin/Alumnos_profile';
     $this->load->view('template',$this->data);
   }
+  public function edit_profile($id)  {
+    $this->data["data_user"] = $this->alumnos_model->get_id($id);
+    $this->data['middle'] = 'pages/admin/Alumnos_profile_edit';
+    $this->load->view('template',$this->data);
+  }
 
   public function create()  {
     $this->data['middle'] = 'pages/admin/Alumnos_create';
