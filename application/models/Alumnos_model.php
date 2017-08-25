@@ -12,6 +12,13 @@ class Alumnos_model extends CI_model{
     $query = $this->db->get();
     return $result = $query->result_array();
   }
+  public function get_id($id){
+    $this->db->select('*');
+    $this->db->from('users_data');
+    $this->db->where('fk_user', $id);
+    $query = $this->db->get();
+    return $result = $query->result_array();
+  }
 
   public function addusers(){
      $array=array('Username'=>$_POST['Username'],'user_email'=>$_POST['user_email'],'password'=>$_POST['Password']);
