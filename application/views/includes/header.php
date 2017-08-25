@@ -1,3 +1,8 @@
+<?php
+if (isset($debug)) {
+    echo $debug;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

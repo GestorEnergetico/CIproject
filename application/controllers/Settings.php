@@ -18,6 +18,7 @@ class Settings extends CI_Controller{
 
   public function editions() {
     $this->data = array();
+    $this->data["debug"] = "editions as index";
     $this->data["result"] = $this->settings_model->get_editions();
     $this->data['middle'] = 'pages/admin/Settings_editions';
     $this->load->view('template',$this->data);
@@ -31,6 +32,7 @@ class Settings extends CI_Controller{
 
   public function add_editions() {
     $this->data = array();
+    $this->data["debug"] = "NEW editions as index";
     $this->data['middle'] = 'pages/admin/editions_new';
     $this->load->view('template',$this->data);
     // $editions=array(
