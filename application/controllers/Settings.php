@@ -31,7 +31,7 @@ class Settings extends CI_Controller{
 
   public function add_editions() {
     $this->data = array();
-    $this->data['middle'] = 'pages/';
+    $this->data['middle'] = 'pages/admin/editions_new';
     $this->load->view('template',$this->data);
     // $editions=array(
     //   'user_name'=>$this->input->post('user_name'),
@@ -44,7 +44,8 @@ class Settings extends CI_Controller{
 
   public function add_services() {
     $this->data = array();
-    $this->load->view('pages/', $this->data);
+    $this->data['middle'] = 'pages/admin/editions_new';
+    $this->load->view('template',$this->data);
     // $this->load->library('form_validation');
     // $this->load->helper('security');
     // $this->form_validation->set_rules('id_servicio','Id_servicio','required|min_length[4]|trim|callback_users_exist|xss_clean');
