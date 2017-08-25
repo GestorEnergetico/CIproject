@@ -57,26 +57,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*    Basic routes    */
 $route['default_controller'] = 'user';
 /*    /Basic routes    */
-// $route['user/user_logout'] = '/logout';
-$route['/logout'] = 'user/user_logout';
-
 
 /*    Test routes    */
-
-// $route['login'] = '/user/login';
-
-// $route['/'] = 'main/dashboard';
-
-// $route['alumnos'] = 'alumnos';
 $route['alumnos/(:num)'] = '/alumnos/$1';
-
-// $route['profesores'] = 'profesores';
-$route['profesores/(:num)'] = '/profesores/$1';
 $route['aulas/(:num)'] = '/aulas/$1';
 
-
+$route['user/user_logout'] = '/logout';
 $route['settings/add_editions'] = '/settings/editions/new';
-$route['settings/add_services'] = '/settings/services/new';
+
+
+// $route['login'] = '/user/login';
+// $route['/'] = 'main/dashboard';
+// $route['alumnos'] = 'alumnos';
+// $route['profesores'] = 'profesores';
+// $route['profesores/(:num)'] = '/profesores/$1';
+// $route['settings/add_editions'] = '/settings/editions/new';
+// $route['settings/add_services'] = '/settings/services/new';
 
 
 
