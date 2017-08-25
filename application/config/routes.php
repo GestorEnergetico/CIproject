@@ -59,13 +59,16 @@ $route['default_controller'] = 'user';
 /*    /Basic routes    */
 
 /*    Test routes    */
-$route['alumnos/(:num)'] = '/alumnos/$1';
-$route['aulas/(:num)'] = '/aulas/$1';
-
-$route['user/user_logout'] = '/logout';
-$route['settings/add_editions'] = '/settings/editions/new';
+$route['logout'] = 'user/user_logout';
+$route['settings/editions/new'] = 'settings/add_editions';
 
 
+// $route['user/user_logout'] = '/logout';
+// $route['settings/add_editions'] = '/settings/editions/new';
+
+
+// $route['alumnos/(:num)'] = '/alumnos/$1';
+// $route['aulas/(:num)'] = '/aulas/$1';
 // $route['login'] = '/user/login';
 // $route['/'] = 'main/dashboard';
 // $route['alumnos'] = 'alumnos';
