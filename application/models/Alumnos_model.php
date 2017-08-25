@@ -16,6 +16,7 @@ class Alumnos_model extends CI_model{
     $this->db->select('*');
     $this->db->from('users_data');
     $this->db->join('users', 'users.id_user = users_data.fk_user');
+    $this->db->join('roles', 'roles.id_role = users.fk_role');
     $this->db->where('fk_user', $id);
     $query = $this->db->get();
     return $result = $query->result_array();
