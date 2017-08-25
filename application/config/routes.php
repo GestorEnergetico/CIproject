@@ -69,6 +69,11 @@ $route['alumnos/(:num)'] = 'alumnos/profile/$1';
 $route['alumnos/(:num)/edit'] = 'alumnos/edit_profile/$1';
 /*    /Alumnos routes    */
 
+/*    Profesores routes    */
+$route['profesores/(:num)'] = 'profesores/profile/$1';
+$route['profesores/(:num)/edit'] = 'profesores/edit_profile/$1';
+/*    /Profesores routes    */
+
 /*    Test routes    */
 
 

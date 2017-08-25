@@ -1,7 +1,7 @@
 <?php
 $out = '';
 foreach ($result as $key => $value) {
-  $out .= $key . " - " . $value["email_users"] . "<br/>";
+  $out .= $key . " - " . $value["email_user"] . "<br/>";
 }
 echo $out;
 ?>
