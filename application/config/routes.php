@@ -66,7 +66,7 @@ $route['settings/services/new'] = 'settings/add_services';
 
 
 /*    Test routes    */
-$route['alumnos/(:num)'] = 'alumnos/';
+$route['alumnos/(:num)'] = 'alumnos/profile/$1';
 
 
 // $route['user/user_logout'] = '/logout';
