@@ -8,6 +8,9 @@ class Settings extends CI_Controller{
     $this->load->helper('url');
     $this->load->model('settings_model');
     $this->load->library('session');
+    if(!$this->session->has_userdata("email_user")){
+      redirect('/');
+    }
   }
 
   public function index(){
