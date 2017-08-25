@@ -13,7 +13,7 @@ class Alumnos_model extends CI_model{
     return $result = $query->result_array();
   }
   public function get_id($id){
-    $this->db->select('*');
+    $this->db->select('name_user, email_user, name_role');
     $this->db->from('users_data');
     $this->db->join('users', 'users.id_user = users_data.fk_user');
     $this->db->join('roles', 'roles.id_role = users.fk_role', 'left');
