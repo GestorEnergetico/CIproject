@@ -13,11 +13,12 @@ class Aulas_model extends CI_model{
     return $result = $query->result_array();
 }
 
-function list_groups() {
-    $this->db->select('id_aula, nombre_aula');
-    $this->db->from('aulas')->order_by('id','asc');
-    $query = $this->db->get();
-    return $query->result_array();
+public function get_id($id){
+  $this->db->select('id_course, name_module');
+  $this->db->from('courses');
+  $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
+  $query = $this->db->get();
+  return $result = $query->result_array();
 }
 
 
