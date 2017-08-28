@@ -7,7 +7,7 @@ class Aulas_model extends CI_model{
 
   public function get_all(){
     $this->db->select('*');
-    $this->db->from('aulas');
+    $this->db->from('courses');
     $query = $this->db->get();
     return $result = $query->result_array();
 }
