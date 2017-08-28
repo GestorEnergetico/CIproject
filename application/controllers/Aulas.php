@@ -14,7 +14,7 @@ class Aulas extends CI_Controller{
     $this->load->view('template',$this->data);
   }
 
-  public function get_id($id)  {
+  public function get_aulas($id)  {
     $this->data["result"] = $this->aulas_model->get_id($id);
     $this->data['middle'] = 'pages/admin/Aulas_profile';
     $this->load->view('template',$this->data);
