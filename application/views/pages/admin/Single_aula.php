@@ -1,4 +1,4 @@
 <?php
 
 
-print_r($result);
+echo $result["name_module"];
