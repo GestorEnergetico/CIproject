@@ -1,4 +1,4 @@
 <?php
 
 
-print_r $course["name_module"];
+print_r $result;
