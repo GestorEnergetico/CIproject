@@ -1,4 +1,4 @@
 <?php
 
 
-echo $result["name_module"];
+echo $course["name_module"];
