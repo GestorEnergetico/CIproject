@@ -7,4 +7,8 @@ foreach ($result as $course) {
   echo "</li>";
 }
 echo "</ol>";
+
+echo $course["name_module"];
+
+
 ?>
