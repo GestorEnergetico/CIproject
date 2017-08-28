@@ -14,5 +14,4 @@ class Aulas extends CI_Controller{
     $this->load->view('template',$this->data);
   }
 
-
 }
