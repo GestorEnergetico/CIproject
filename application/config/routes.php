@@ -72,7 +72,10 @@ $route['alumnos/(:num)/delete'] = 'alumnos/delete/$1';
 
 /*    Profesores routes    */
 $route['profesores/(:num)'] = 'profesores/profile/$1';
+$route['profesores/(:num)/new'] = 'profesores/new_profesores/$1';
 $route['profesores/(:num)/edit'] = 'profesores/edit_profile/$1';
+$route['profesores/(:num)/delete'] = 'profesores/delete/$1';
+
 /*    /Profesores routes    */
 
 $route['aulas/(:num)'] = 'aulas/get_id/$1';
