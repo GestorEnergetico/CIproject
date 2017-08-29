@@ -80,6 +80,8 @@ $route['aulas/(:num)/edit'] = 'aulas/get_id/$1';
 
 $route['calendar/(:num)'] = 'calendar/get_id/$1';
 $route['calendar/(:num)/edit'] = 'calendar/get_id/$1';
+
+$route['404_override'] = 'my404'; 
 /*    Test routes    */
 
 
