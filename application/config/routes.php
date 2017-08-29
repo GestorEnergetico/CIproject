@@ -65,6 +65,7 @@ $route['settings/services/new'] = 'settings/add_services';
 
 /*    Alumnos routes    */
 $route['alumnos/(:num)'] = 'alumnos/profile/$1';
+$route['alumnos/(:num)/new'] = 'alumnos/new/$1';
 $route['alumnos/(:num)/edit'] = 'alumnos/edit_profile/$1';
 $route['alumnos/(:num)/delete'] = 'alumnos/delete/$1';
 /*    /Alumnos routes    */

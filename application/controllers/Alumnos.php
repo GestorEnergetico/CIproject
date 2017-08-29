@@ -28,7 +28,7 @@ class Alumnos extends CI_Controller{
     $this->load->view('template',$this->data);
   }
 
-  public function create()  {
+  public function new()  {
     $this->data['middle'] = 'pages/admin/Alumnos_new';
     $this->load->view('template',$this->data);
   }

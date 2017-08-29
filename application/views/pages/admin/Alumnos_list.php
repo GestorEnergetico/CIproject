@@ -1,4 +1,4 @@
-<a href="/alumnos/create">Nuevo Alumno</a>
+<a href="/alumnos/new">Nuevo Alumno</a>
 <?php
 $out = '';
 foreach ($result as $key => $value) {

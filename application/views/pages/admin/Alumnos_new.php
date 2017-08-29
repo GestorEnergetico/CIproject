@@ -1,6 +1,6 @@
 <div class="login-panel panel panel-success">
   <div class="panel-heading">
-    <h3 class="panel-title">Add Alumnos</h3>
+    <h3 class="panel-title">Nuevo Alumnos</h3>
   </div>
   <div class="panel-body">
 
