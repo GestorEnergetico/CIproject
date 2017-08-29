@@ -17,6 +17,12 @@ class Alumnos extends CI_Controller{
     $this->data['middle'] = 'pages/admin/Alumnos_list';
     $this->load->view('template',$this->data);
   }
+  public function get_id($id)  {
+
+    $this->data["result"] = $this->Aulas_model->get_id($id);
+    $this->data['middle'] = 'pages/admin/Single_alumno';
+    $this->load->view('template',$this->data);
+  }
   public function profile($id)  {
     $this->data["data_user"] = $this->alumnos_model->get_id($id);
     $this->data['middle'] = 'pages/admin/Alumnos_profile';
