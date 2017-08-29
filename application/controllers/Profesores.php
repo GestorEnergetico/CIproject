@@ -20,7 +20,7 @@ class Profesores extends CI_Controller{
 
   public function profile($id)  {
     $this->data["data_user"] = $this->profesores_model->get_id($id);
-    $this->data['middle'] = 'pages/admin/Profesores_profile';
+    $this->data['middle'] = 'pages/admin/Signle_prof';
     $this->load->view('template',$this->data);
   }
   public function edit_profile($id)  {
