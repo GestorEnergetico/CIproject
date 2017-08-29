@@ -77,6 +77,9 @@ $route['profesores/(:num)/edit'] = 'profesores/edit_profile/$1';
 $route['aulas/(:num)'] = 'aulas/get_id/$1';
 $route['aulas/(:num)/edit'] = 'aulas/get_id/$1';
 
+
+$route['calendars/(:num)'] = 'calendars/get_id/$1';
+$route['calendars/(:num)/edit'] = 'calendars/get_id/$1';
 /*    Test routes    */
 
 
