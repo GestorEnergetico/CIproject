@@ -33,7 +33,7 @@ class Profesores extends CI_Controller{
     $this->load->view('template',$this->data);
   }
   public function edit($id)  {
-    $this->data["result"] = $this->alumnos_model->get_id($id);
+    $this->data["result"] = $this->profesores_model->get_id($id);
     $this->data['middle'] = 'pages/admin/Profesores_create';
     $this->load->view('template',$this->data);
   }
