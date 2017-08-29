@@ -66,6 +66,7 @@ $route['settings/services/new'] = 'settings/add_services';
 /*    Alumnos routes    */
 $route['alumnos/(:num)'] = 'alumnos/profile/$1';
 $route['alumnos/(:num)/edit'] = 'alumnos/edit_profile/$1';
+$route['alumnos/(:num)/delete'] = 'alumnos/delete/$1';
 /*    /Alumnos routes    */
 
 /*    Profesores routes    */
@@ -80,7 +81,7 @@ $route['aulas/(:num)/edit'] = 'aulas/get_id/$1';
 $route['calendar/(:num)'] = 'calendar/get_id/$1';
 $route['calendar/(:num)/edit'] = 'calendar/get_id/$1';
 
-$route['404_override'] = 'my404'; 
+$route['404_override'] = 'my404';
 // $route['404_override'] = '';
 /*    Test routes    */
 

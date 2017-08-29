@@ -29,12 +29,12 @@ class Alumnos extends CI_Controller{
   }
 
   public function create()  {
-    $this->data['middle'] = 'pages/admin/Alumnos_create';
+    $this->data['middle'] = 'pages/admin/Alumnos_new';
     $this->load->view('template',$this->data);
   }
   public function edit($id)  {
     $this->data["result"] = $this->alumnos_model->get_id($id);
-    $this->data['middle'] = 'pages/admin/Alumnos_create';
+    $this->data['middle'] = 'pages/admin/Alumnos_new';
     $this->load->view('template',$this->data);
   }
   public function delete($id)  {
@@ -46,6 +46,7 @@ class Alumnos extends CI_Controller{
       // redirec
     }
   }
+
 
   public function adduser()
   {
