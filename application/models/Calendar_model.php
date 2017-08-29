@@ -13,4 +13,4 @@ class Calendar_model extends CI_model{
     return $result = $query->result_array();
 }
 
- ?>
+}
