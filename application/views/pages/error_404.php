@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <p>page not found</p>
+    <p>PAGE NOT FOUND</p>
 
   </body>
 </html>
