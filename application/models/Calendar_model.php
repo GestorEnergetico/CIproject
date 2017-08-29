@@ -8,7 +8,7 @@ class Calendar_model extends CI_model{
   public function get_all(){
     $this->db->select('id_calendar, name_calendar');
     $this->db->from('calendars');
-    $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
+    // $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
     $query = $this->db->get();
     return $result = $query->result_array();
 }
