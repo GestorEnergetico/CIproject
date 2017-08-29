@@ -1,8 +1,10 @@
 <a href="/alumnos/new_alumno">Nuevo Alumno</a>
+
 <?php
-$out = '';
-foreach ($result as $key => $value) {
-  $out .= $value["id_user"] . " - " . $value["email_user"] . "<br/>";
+echo "<ol>";
+foreach ($result as $course) {
+  echo "<li>";
+  echo "<a href='/aulas/". $course["id_user"] ."'>" . $course["email_user"] . "</a>";
+  echo "</li>";
 }
-echo $out;
-?>
+echo "</ol>";
