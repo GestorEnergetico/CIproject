@@ -13,3 +13,4 @@ class Calendar extends CI_Controller{
     $this->data['middle'] = 'pages/admin/Calendar_list';
     $this->load->view('template',$this->data);
   }
+}
