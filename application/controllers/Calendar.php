@@ -1,5 +1,4 @@
 <?php
-<?php
 class Calendar extends CI_Controller{
 
   function __construct(){
