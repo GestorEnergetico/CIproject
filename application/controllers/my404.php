@@ -6,10 +6,10 @@ class my404 extends CI_Controller
         parent::__construct();
     }
 
-    public function index() 
+    public function index()
     {
         $this->output->set_status_header('404');
         $data['content'] = 'error_404'; // View name
-        $this->load->view('index',$data);//loading in my template
+        $this->load->view('pages',$data);//loading in my template
     }
 }
