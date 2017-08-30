@@ -83,7 +83,10 @@ $route['aulas/(:num)/edit'] = 'aulas/get_id/$1';
 
 
 $route['calendar/(:num)'] = 'calendar/get_id/$1';
-$route['calendar/(:num)/edit'] = 'calendar/get_id/$1';
+$route['calendar/(:num)/new'] = 'calendar/new_calendar/$1';
+$route['calendar/(:num)/edit'] = 'calendar/edit_calendar/$1';
+$route['calendar/(:num)/delete'] = 'calendar/delete/$1';
+
 
 $route['404_override'] = 'my404';
 // $route['404_override'] = '';
