@@ -7,8 +7,10 @@ class Alumnos_model extends CI_model{
 
   public function get_all(){
     $this->db->select('*');
-    $this->db->from('users');
-    $this->db->where('fk_role', '1');
+    $this->db->from('users_data');
+    $this->db->join('users', 'users.id_user = users_data.fk_user');
+    $this->db->join('roles', 'roles.id_role = users.fk_role', 'left');
+    $this->db->where('users.fk_role', '1');
     $query = $this->db->get();
     return $result = $query->result_array();
   }

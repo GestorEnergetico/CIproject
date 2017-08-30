@@ -5,18 +5,22 @@ $table_data = '';
 foreach ($result as $course) {
   $table_data .= '
   <tr>
-  <td>'.$course["id_user"].'</td>
-  <td><%= reg.email %></td>
-  <td><%= reg.name %></td>
+  <td class="hidden">'.$course["modified_at"].'</td>
+  <td>'.'-'.'</td>
+  <td>'.'-'.'</td>
+  <td>'.'-'.'</td>
+  <td>'.'-'.'</td>
+  <td>'.'-'.'</td>
+  <td>'.'-'.'</td>
+  <td>'.'-'.'</td>
   </tr>';
-  echo "<a href='/aulas/". $course["id_user"] ."'>" . $course["email_user"] . "</a>";
 }
 
 ?>
 <table id="basic-table">
   <thead>
     <tr>
-      <th> Modified </th>
+      <th class="hidden"> Modified </th>
       <th> Imagen </th>
       <th> Nombre </th>
       <th> Correo Electrónico </th>
