@@ -1,4 +1,9 @@
 /*------ General -------*/
+
+.ctm-profile-table{
+  max-width: 45px;
+}
+
 /**:active,*/
 /**:hover,*/
 /**:focus,*/
