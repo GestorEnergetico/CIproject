@@ -6,7 +6,7 @@ foreach ($result as $user) {
   $table_data .= '
   <tr>
   <td class="hidden">'.$user["modified_at"].'</td>
-  <td>'.'<img src="'.profile_image($user["photo_user"]).'" alt="'.$user["photo_user"].'">'.'</td>
+  <td>'.'<img class="img-thumbnail" src="'.profile_image($user["photo_user"]).'" alt="'.$user["photo_user"].'">'.'</td>
   <td>'.'-'.'</td>
   <td>'.'-'.'</td>
   <td>'.'-'.'</td>
