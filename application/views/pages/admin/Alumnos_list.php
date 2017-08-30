@@ -1,6 +1,6 @@
 <a href="/alumnos/new_alumno">Nuevo Alumno</a>
 <?php
-// print_r($result);
+print_r($result);
 $table_data = '';
 foreach ($result as $user) {
   $table_data .= '
