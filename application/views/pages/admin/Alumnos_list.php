@@ -1,12 +1,12 @@
 <a href="/alumnos/new_alumno">Nuevo Alumno</a>
 <?php
-print_r($result);
+// print_r($result);
 $table_data = '';
-foreach ($result as $course) {
+foreach ($result as $user) {
   $table_data .= '
   <tr>
-  <td class="hidden">'.$course["modified_at"].'</td>
-  <td>'.'-'.'</td>
+  <td class="hidden">'.$user["modified_at"].'</td>
+  <td>'.'<img src="'.profile_image($user["photo_user"]).'" alt="profile">'.'</td>
   <td>'.'-'.'</td>
   <td>'.'-'.'</td>
   <td>'.'-'.'</td>
@@ -17,6 +17,7 @@ foreach ($result as $course) {
 }
 
 ?>
+
 <table id="basic-table">
   <thead>
     <tr>
