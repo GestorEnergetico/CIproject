@@ -43,16 +43,21 @@ class Alumnos extends CI_Controller{
     $this->data['middle'] = 'pages/admin/Alumnos_new';
     $this->load->view('template',$this->data);
   }
-  public function delete($id)  {
-    $this->data["result"] = $this->alumnos_model->del_id($id);
-    $this->data["msg_box"] = "Ha habido un error";
-    if($this->data["result"] == true){
-      $this->data["msg_box"] = "Se ha eliminado correctamente";
-      // $this->load->view('pages/admin/Alumnos_list', $this->data);
-      // redirec
-    }
-  }
-
+  // public function delete($id)  {
+  //   $this->data["result"] = $this->alumnos_model->del_id($id);
+  //   $this->data["msg_box"] = "Ha habido un error";
+  //   if($this->data["result"] == true){
+  //     $this->data["msg_box"] = "Se ha eliminado correctamente";
+  //     // $this->load->view('pages/admin/Alumnos_list', $this->data);
+  //     // redirec
+  //   }
+  // }
+  function delete($id){
+   $this->load->model('alumnos_model');
+   // Pass the $id to the row_delete() method
+   $this->mod1->row_delete($id);
+   redirect($_SERVER['HTTP_REFERER']);
+}
 
   public function adduser()
   {

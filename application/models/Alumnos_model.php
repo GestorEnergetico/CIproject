@@ -28,7 +28,7 @@ class Alumnos_model extends CI_model{
      $array=array('Username'=>$_POST['Username'],'user_email'=>$_POST['user_email'],'password'=>$_POST['Password']);
      $this->db->set($array);
      $query=$this->db->insert('user');
-      return $query;
+     return $query;
     }
 
     public function users_exists(){
@@ -39,6 +39,10 @@ class Alumnos_model extends CI_model{
         } else {
             return true;
         }
-
-}
+    }
+    public function delete($id){
+      $this->db->where('id', $id);
+      $this->db->delete('users');
+      return $this->db->affected_rows();
+    }
 }
