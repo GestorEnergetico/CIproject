@@ -21,5 +21,10 @@ class Aulas_model extends CI_model{
     $query = $this->db->get();
     return $result = $query->result_array();
   }
+  
+  function delete_id($id){
+    $this->db->where('id', $id);
+    $this->db->delete('aulas');
+  }
 
 }

@@ -17,13 +17,15 @@ class Aulas extends CI_Controller{
     $this->data['middle'] = 'pages/admin/Single_aula';
     $this->load->view('template',$this->data);
   }
-  function delete_id($id){
-    $this->data["result"] = $this->Aulas_model->del_id('Aulas');
-    $this->data['middle'] = 'pages/admin/Single_aula';
-    $this->load->view('template',$this->data);
-
-}
-
-
+//   function delete_id($id){
+//     $this->data["result"] = $this->Aulas_model->del_id('Aulas');
+//     $this->data['middle'] = 'pages/admin/Single_aula';
+//     $this->load->view('template',$this->data);
+// }
+  public function delete_id($id){
+    $this->load->model('mod1');
+    $this->mod1->row_delete();
+    redirect($_SERVER['HTTP_REFERER']);
+  }
 
 }
