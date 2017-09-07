@@ -23,7 +23,10 @@ class Aulas_model extends CI_model{
   }
 
   function delete_id($id){
-    $this->db->where('id', $id);
+    $this->db->select('id_course, name_module');
+    $this->db->from('courses');
+    $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
+    $this->db->where('courses.id_course', $id);
     $this->db->delete('aulas');
   }
 

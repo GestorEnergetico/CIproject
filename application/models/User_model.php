@@ -23,6 +23,7 @@ class User_model extends CI_model{
       return false;
     }
   }
+
   public function email_check($email){
 
     $this->db->select('*');
