@@ -23,7 +23,7 @@ class Aulas extends CI_Controller{
 //     $this->load->view('template',$this->data);
 // }
   public function delete_id($id){
-    $this->load->model('mod1');
+    $this->load->model('Aulas_model');
     $this->mod1->row_delete();
     redirect($_SERVER['HTTP_REFERER']);
   }
