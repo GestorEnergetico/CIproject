@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Login</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="faicons/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/master_login.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 </head>
 <body>
   <?php
