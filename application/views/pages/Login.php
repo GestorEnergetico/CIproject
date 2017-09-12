@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Login-CI Login Registration</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <div class="login-panel panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Login</h3>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="faicons/css/font-awesome.min.css">
+</head>
+<body>
+  <?php
+  $success_msg= $this->session->flashdata('success_msg');
+  $error_msg= $this->session->flashdata('error_msg');
 
-            <?php
-              $success_msg= $this->session->flashdata('success_msg');
-              $error_msg= $this->session->flashdata('error_msg');
-
-                if($success_msg){
-              ?>
-              <div class="alert alert-success">
-              <?php echo $success_msg; ?>
-                </div>
-              <?php
-              }
-              if($error_msg){
-              ?>
-              <div class="alert alert-danger">
-                      <?php echo $error_msg; ?>
-              </div>
-              <?php
-                }
-                ?>
-                <div class="panel-body">
-                  <form role="form" method="post" action="<?php echo base_url('user/login'); ?>">
-                    <fieldset>
-                      <div class="form-group"  >
-                        <input class="form-control" placeholder="E-mail" name="user_email" type="text"  autofocus>
-                          </div>
-                            <div class="form-group">
-                              <input class="form-control" placeholder="Password" name="user_password" type="password"  value="">
-                          </div>
-                            <input class="btn btn-lg btn-success btn-block" type="submit" value="login" name="login" >
-                          </fieldset>
-                    </form>
-                <center><b>Not registered ?</b> <br></b><a href="<?php echo base_url('user'); ?>">Register here</a></center><!--for centered text-->
-
-                </div>
-            </div>
-        </div>
+  if($success_msg){
+    ?>
+    <div class="alert alert-success">
+      <?php echo $success_msg; ?>
     </div>
-</div>
-
-  </body>
+    <?php
+  }
+  if($error_msg){
+    ?>
+    <div class="alert alert-danger">
+      <?php echo $error_msg; ?>
+    </div>
+    <?php
+  }
+  ?>
+  <form  action="<?php echo base_url('user/login'); ?>" method="post">
+    <div class="content_login flex">
+      <div class="box">
+        <img style="max-width:120px;" src="img\gestor-energetico-logo.png" alt="Logo Gestor Energético">
+        <div class="login">
+          <label><i class="fa fa-user" aria-hidden="true"></i> <input type="text" placeholder="Username" name="user_email" value=""></label>
+          <label><i class="fa fa-lock" aria-hidden="true"></i> <input type="password" placeholder="Password" name="user_password" value=""></label>
+          <button type="submit" name="button">Log in</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
 </html>
+<!-- based in: https://cdn.elegantthemes.com/blog/wp-content/uploads/2016/06/divi-login-page-5.jpg -->
