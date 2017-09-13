@@ -14,7 +14,7 @@ class User extends CI_Controller{
       $this->data['middle'] = 'pages/Dashboard.php';
       $this->load->view('template',$this->data);
     }else{
-      $this->load->view("pages/Login.php");
+      redirect("/login");
     }
   }
   public function create(){
