@@ -1,6 +1,6 @@
 <?php
 try {
-    include_once '../../../includes/ClickMeetingRestClient.php';
+    include_once './includes/ClickMeetingRestClient.php';
     $client = new ClickMeetingRestClient(array('api_key' => 'eu9924049867a04e4468b52c4243e32ff4cdfbe082'));
     // Conferences
     $params = array(
