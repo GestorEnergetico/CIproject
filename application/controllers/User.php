@@ -9,8 +9,12 @@ class User extends CI_Controller{
     $this->load->model('user_model');
     $this->load->library('session');
     if(!$this->session->has_userdata("email_user")){
-      $this->session->set_flashdata('refer', $this->uri->uri_string());
-      redirect('/login');
+      if($this->uri->uri_string() != "login"){
+        $this->session->set_flashdata('refer', $this->uri->uri_string());
+        redirect('/login');
+      }else{
+        $this->load->view("pages/Login.php");
+      }
     }
   }
   public function index(){
