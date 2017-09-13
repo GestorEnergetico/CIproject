@@ -56,6 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*    Basic routes    */
 $route['default_controller'] = 'user';
 $route['logout'] = 'user/user_logout';
+$route['login'] = 'user/login';
 /*    /Basic routes    */
 
 /*    Settings routes    */
