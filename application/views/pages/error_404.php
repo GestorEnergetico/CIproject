@@ -6,7 +6,7 @@
   </head>
   <body>
 <?php
-print_r($ses);
+print_r($session);
  ?>
     <p>PAGE NOT FOUND</p>
 
