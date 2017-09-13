@@ -63,7 +63,11 @@ class User extends CI_Controller{
         $this->session->set_userdata('email_user',$data['email_user']);
         $this->session->set_userdata('passphrase_user',$data['passphrase_user']);
         // view
-        redirect('/');
+        $u = "/";
+        if(isset(trim($this->input->post('refer')))){
+          $u = $this->input->post('refer');
+        }
+        redirect($u);
       }else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
         // view
