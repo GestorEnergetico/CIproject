@@ -5,7 +5,9 @@
     <title>404</title>
   </head>
   <body>
-
+<?php
+print_r($ses);
+ ?>
     <p>PAGE NOT FOUND</p>
 
   </body>
