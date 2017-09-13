@@ -12,20 +12,7 @@
   $success_msg= $this->session->flashdata('success_msg');
   $error_msg= $this->session->flashdata('error_msg');
 
-  if($success_msg){
-    ?>
-    <div class="alert alert-success">
-      <?php echo $success_msg; ?>
-    </div>
-    <?php
-  }
-  if($error_msg){
-    ?>
-    <div class="alert alert-danger">
-      <?php echo $error_msg; ?>
-    </div>
-    <?php
-  }
+
   ?>
   <div class="content_login flex">
     <div class="box">
@@ -37,6 +24,22 @@
           <button type="submit" name="button">Log in</button>
         </form>
       </div>
+      <?php
+      if($success_msg){
+        ?>
+        <div class="alert alert-success">
+          <?php echo $success_msg; ?>
+        </div>
+        <?php
+      }
+      if($error_msg){
+        ?>
+        <div class="alert alert-danger">
+          <?php echo $error_msg; ?>
+        </div>
+        <?php
+      }
+      ?>
     </div>
   </div>
 </body>
