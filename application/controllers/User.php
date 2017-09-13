@@ -13,22 +13,18 @@ class User extends CI_Controller{
       redirect('/login');
     }
   }
-
   public function index(){
     if($this->session->has_userdata("email_user")){
       $this->data['middle'] = 'pages/Dashboard.php';
       $this->load->view('template',$this->data);
+    }
   }
   public function create(){
-
   }
   public function edit(){
-
   }
   public function delete(){
-
   }
-
   public function register_user(){
 
     $user=array(
@@ -50,7 +46,6 @@ class User extends CI_Controller{
       redirect('/alumnos/create');
     }
   }
-
   public function login(){
     if($this->input->post()){
       $user_login=array(
@@ -80,8 +75,6 @@ class User extends CI_Controller{
     }
 
   }
-
-
   function user_profile(){
     $this->load->view('pages/Profile.php');
 
@@ -89,10 +82,8 @@ class User extends CI_Controller{
   function alumnos($id){
     // $this->load->view('pages/Profile.php');
   }
-
   public function user_logout(){
     $this->session->sess_destroy();
     redirect('/', 'refresh');
   }
-
 }
