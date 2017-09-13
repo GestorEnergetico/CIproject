@@ -96,23 +96,3 @@ $route['404_override'] = 'NotFound';
 
 // $route['user/user_logout'] = '/logout';
 // $route['settings/add_editions'] = '/settings/editions/new';
-
-
-// $route['alumnos/(:num)'] = '/alumnos/$1';
-// $route['aulas/(:num)'] = '/aulas/$1';
-// $route['login'] = '/user/login';
-// $route['/'] = 'main/dashboard';
-// $route['alumnos'] = 'alumnos';
-// $route['profesores'] = 'profesores';
-// $route['profesores/(:num)'] = '/profesores/$1';
-// $route['settings/add_editions'] = '/settings/editions/new';
-// $route['settings/add_services'] = '/settings/services/new';
-
-
-
-
-
-
-
-
-//

@@ -1,5 +1,5 @@
 <?php
-class My404 extends CI_Controller
+class NotFound extends CI_Controller
 {
   public function __construct(){
     parent::__construct();
