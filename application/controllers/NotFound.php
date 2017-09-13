@@ -27,9 +27,10 @@ class NotFound extends CI_Controller
         $tmp = "alumno";
         break;
       }
-      $data["tmp"] = $tmp;
       $this->output->set_status_header('404');
-      $this->load->view('pages/error_404', $data);
+      $data["tmp"] = $tmp;
+      $data["middle"] = 'pages/error_404';
+      $this->load->view('template', $data);
     }
   }
 }
