@@ -26,7 +26,7 @@ class My404 extends CI_Controller
         break;
       }
       $this->output->set_status_header('404');
-      $this->data["role"] = $tmp;
+      $this->data["content"] = $tmp;
       $this->load->view('pages/error_404', $this->data);
     }
   }
