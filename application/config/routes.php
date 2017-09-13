@@ -88,8 +88,8 @@ $route['calendar/(:num)/new'] = 'calendar/new_calendar/$1';
 $route['calendar/(:num)/edit'] = 'calendar/edit_calendar/$1';
 $route['calendar/(:num)/delete'] = 'calendar/delete/$1';
 
+$route['404_override'] = 'n404';
 
-$route['404_override'] = 'my404';
 // $route['404_override'] = '';
 /*    Test routes    */
 
