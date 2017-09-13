@@ -10,8 +10,7 @@ class My404 extends CI_Controller
     if($this->session->has_userdata("email_user")){
       $this->data['session'] = $this->session->userdata();
       $this->output->set_status_header('404');
-      $this->data['middle'] = 'pages/error_404';
-      $this->load->view('template',$this->data);
+      $this->load->view('pages/error_404',$this->data);
     }
   }
 }

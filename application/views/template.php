@@ -5,7 +5,6 @@
 <!-- main -->
 <main class="col-md-9">
   <?php
-  print_r($sesion);
   $this->load->view($middle);
   ?>
 </main>
