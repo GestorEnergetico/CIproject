@@ -11,8 +11,7 @@
   <?php
   $success_msg= $this->session->flashdata('success_msg');
   $error_msg= $this->session->flashdata('error_msg');
-
-
+  echo "refer: " . $this->session->flashdata('refer');
   ?>
   <div class="content_login flex">
     <div class="box">

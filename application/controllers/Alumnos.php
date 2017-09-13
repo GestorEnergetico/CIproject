@@ -8,7 +8,8 @@ class Alumnos extends CI_Controller{
     $this->load->model('alumnos_model');
     $this->load->library('session');
     if(!$this->session->has_userdata("email_user")){
-      redirect('/');
+      $this->session->set_flashdata('refer', $this->uri);
+      redirect('/login');
     }
   }
 
@@ -54,8 +55,8 @@ class Alumnos extends CI_Controller{
   function delete($id){
    $this->load->model('alumnos_model');
    // Pass the $id to the row_delete() method
-   $this->mod1->row_delete($id);
-   redirect($_SERVER['HTTP_REFERER']);
+  //  $this->mod1->row_delete($id);
+  //  redirect();
 }
 
   public function adduser()
@@ -66,14 +67,11 @@ class Alumnos extends CI_Controller{
     $this->form_validation->set_rules('user_email','User_email','trim|required|min_length[6]|max_length[50]|matches[password_conf]|md5|trim|xss_clean');
     $this->form_validation->set_rules('user_password','User_password','trim|required|min_length[6]|max_length[50]|matches[password_conf]|md5|trim|xss_clean');
   }
-  public function users_exists()
-  {
+  public function users_exists(){
     $this->load->model('model_emp');
-    if ($this->model_emp->users_exists())
-    {
+    if ($this->model_emp->users_exists()){
       return true;
-    }else
-    {
+    }else{
       $this->form_validation->set_message('users_exists','User Already Existed.');
       return false;
     }
