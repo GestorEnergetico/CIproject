@@ -8,7 +8,6 @@ class My404 extends CI_Controller
 
   public function index(){
     if($this->session->has_userdata("email_user")){
-      $this->output->set_status_header('404');
       switch ($this->session->role) {
         case 1:
         $tmp = "alumno";
@@ -26,8 +25,9 @@ class My404 extends CI_Controller
         $tmp = "alumno";
         break;
       }
+      $this->output->set_status_header('404');
       $this->data["role"] = $tmp;
-      $this->load->view('pages/error_404',$this->data);
+      $this->load->view('pages/error_404', $this->data);
     }
   }
 }
