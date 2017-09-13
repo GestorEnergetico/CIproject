@@ -8,7 +8,8 @@ class Profesores extends CI_Controller{
     $this->load->model('profesores_model');
     $this->load->library('session');
     if(!$this->session->has_userdata("email_user")){
-      redirect('/');
+      $this->session->set_flashdata('refer', $this->uri->uri_string());
+      redirect('/login');
     }
   }
 

@@ -6,6 +6,10 @@ class Aulas extends CI_Controller{
     $this->load->helper('url');
     $this->load->model('Aulas_model');
     $this->load->library('session');
+    if(!$this->session->has_userdata("email_user")){
+      $this->session->set_flashdata('refer', $this->uri->uri_string());
+      redirect('/login');
+    }
   }
   public function index()  {
     $this->data["result"] = $this->Aulas_model->get_all();

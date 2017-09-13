@@ -6,6 +6,10 @@ class Calendar extends CI_Controller{
     $this->load->helper('url');
     $this->load->model('Calendar_model');
     $this->load->library('session');
+    if(!$this->session->has_userdata("email_user")){
+      $this->session->set_flashdata('refer', $this->uri->uri_string());
+      redirect('/login');
+    }
   }
 
   public function index()  {

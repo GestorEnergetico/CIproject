@@ -8,14 +8,16 @@ class User extends CI_Controller{
     $this->load->helper('url');
     $this->load->model('user_model');
     $this->load->library('session');
+    if(!$this->session->has_userdata("email_user")){
+      $this->session->set_flashdata('refer', $this->uri->uri_string());
+      redirect('/login');
+    }
   }
+
   public function index(){
     if($this->session->has_userdata("email_user")){
       $this->data['middle'] = 'pages/Dashboard.php';
       $this->load->view('template',$this->data);
-    }else{
-      redirect("/login");
-    }
   }
   public function create(){
 
