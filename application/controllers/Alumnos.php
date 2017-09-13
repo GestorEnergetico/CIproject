@@ -8,7 +8,7 @@ class Alumnos extends CI_Controller{
     $this->load->model('alumnos_model');
     $this->load->library('session');
     if(!$this->session->has_userdata("email_user")){
-      $this->session->set_flashdata('refer', $this->uri);
+      $this->session->set_flashdata('refer', $this->uri->uri_string());
       redirect('/login');
     }
   }
