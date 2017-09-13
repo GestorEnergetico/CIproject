@@ -8,6 +8,7 @@ class My404 extends CI_Controller
 
   public function index(){
     if($this->session->has_userdata("email_user")){
+      $tmp = "df";
       switch ($this->session->role) {
         case 1:
         $tmp = "alumno";
