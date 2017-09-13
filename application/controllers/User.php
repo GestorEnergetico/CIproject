@@ -56,12 +56,7 @@ class User extends CI_Controller{
         'password_user'=>md5($this->input->post('user_password')),
         'passphrase_user'=>$this->input->post('user_password')
       );
-      // recibido
-      // print_r($this->input->post());
-      // echo "<hr>";
       $data=$this->user_model->login_user($user_login['email_user'],$user_login['password_user']);
-      // data if exists
-      // print_r($data);
 
       if($data){
         $this->session->set_userdata('id_user',$data['id_user']);
@@ -69,7 +64,6 @@ class User extends CI_Controller{
         $this->session->set_userdata('passphrase_user',$data['passphrase_user']);
         // view
         redirect('/');
-        // $this->load->view('pages/Login.php');
       }else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
         // view
@@ -80,30 +74,7 @@ class User extends CI_Controller{
     }
 
   }
-  // public function login_view(){
-  //   $this->load->view("pages/Login.php");
-  // }
-  //
-  // function login_user(){
-  //   $user_login=array(
-  //     'user_email'=>$this->input->post('user_email'),
-  //     'user_password'=>md5($this->input->post('user_password'))
-  //   );
-  //   $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-  //   if($data){
-  //     $this->session->set_userdata('user_id',$data['user_id']);
-  //     $this->session->set_userdata('user_email',$data['user_email']);
-  //     $this->session->set_userdata('user_name',$data['user_name']);
-  //     $this->session->set_userdata('user_age',$data['user_age']);
-  //     $this->session->set_userdata('user_mobile',$data['user_mobile']);
-  //     // view
-  //     $this->load->view('pages/Profile.php');
-  //   }else{
-  //     $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-  //     // view
-  //     $this->load->view("pages/Login.php");
-  //   }
-  // }
+
 
   function user_profile(){
     $this->load->view('pages/Profile.php');
