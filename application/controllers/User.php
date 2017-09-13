@@ -63,9 +63,9 @@ class User extends CI_Controller{
         $this->session->set_userdata('email_user',$data['email_user']);
         $this->session->set_userdata('passphrase_user',$data['passphrase_user']);
         // view
-        $u = "/";
-        if(isset($this->input->post('refer'))){
-          $u = $this->input->post('refer');
+        $u = $this->input->post('refer');
+        if(!isset($u)){
+          $u = '/';
         }
         redirect($u);
       }else{
