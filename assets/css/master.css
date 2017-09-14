@@ -129,10 +129,15 @@ nav{}
     }
 
 /*------ Calendar -------*/
-.single_calendar ul{}
+.single_calendar ul{
+  list-style: none;
+}
+.single_calendar ul li:first-child{
+  border-top: 1px solid #ccc;
+}
 .single_calendar ul li{
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .single_calendar ul li:hover{
   background: #ccc;
