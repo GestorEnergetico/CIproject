@@ -2,9 +2,9 @@
 
 // by default year
 $o_anio='';
-foreach ($years as $year) {
-  $v_url = "/". $this->uri->uri_string() . "/" .$year["year_edition"];
-  $anio .= "<li><a href='".$v_url."'>".$year["year_edition"]."</a></li>";
+foreach ($years as $e) {
+  $v_url = "/". $this->uri->uri_string() . "/" .$e["year_edition"];
+  $o_anio .= "<li><a href='".$v_url."'>".$e["year_edition"]."</a></li>";
 }
 
 //editions when year exists
@@ -19,7 +19,7 @@ if($editions){
 
 //courses when editions exists
 $o_course = '';
-if($editions){
+if($courses){
   foreach ($courses as $e) {
     $v_url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
     $v_name = 'course';
