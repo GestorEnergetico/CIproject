@@ -3,9 +3,18 @@
 // by default year
 $anio='';
 foreach ($years as $year) {
-  $anio .= "<li><a href='/". $this->uri->uri_string() . "/" .$year["year_edition"]."'>".$year["year_edition"]."</a></li>";
+  $url = "/". $this->uri->uri_string() . "/" .$year["year_edition"];
+  $anio .= "<li><a href='".$url."'>".$year["year_edition"]."</a></li>";
 }
 
+//editions when year exists
+$edition = '';
+if($editions){
+  foreach ($editions as $e) {
+    $url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
+    $edition .= "<li><a href='".$url."'>".$e["name_service"]."</a></li>";
+  }
+}
 
 
 ?>
@@ -24,7 +33,7 @@ foreach ($years as $year) {
       <li>
         <h3>Edicion</h3>
       </li>
-      <?php echo $editions; ?>
+      <?php echo $edition; ?>
     </ul>
   </div>
 
