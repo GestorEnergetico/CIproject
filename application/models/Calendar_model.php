@@ -33,7 +33,7 @@ public function get_editions($year){
   $this->db->from('editions');
   $this->db->join('services', 'services.id_service = editions.fk_service', 'left');
   $this->db->where('editions.year_edition', $year);
-  
+  $this->db->order_by('editions.year_edition DESC, editions.month_edition DESC');
   $query = $this->db->get();
   return $result = $query->result_array();
 }

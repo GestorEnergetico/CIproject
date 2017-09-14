@@ -11,8 +11,9 @@ foreach ($years as $year) {
 $edition = '';
 if($editions){
   foreach ($editions as $e) {
-    $url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
-    $edition .= "<li><a href='".$url."'>".$e["name_service"]."</a></li>";
+    $v_url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
+    $v_name = $e["year_edition"] ."-". $e["month_edition"] ." ". $e["name_service"];
+    $edition .= "<li><a href='".$v_url."'>".$v_name."</a></li>";
   }
 }
 
