@@ -1,7 +1,7 @@
 <?php
 
 $out='';
-foreach ($year as $year) {
+foreach ($years as $year) {
 $out .= "<li>".$year."</li>";
 }
 ?>
