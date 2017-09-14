@@ -14,9 +14,9 @@ foreach ($years as $e) {
 $o_edition = '';
 if($editions){
   foreach ($editions as $e) {
-    $v_url = "/". $this->uri->uri_string();
+    $v_url = "/". $this->uri->segment(1);
     if($this->uri->total_segments()<3){
-      $v_url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
+      $v_url = "/". $this->uri->segment(1) . "/" .$e["id_edition"];
     }
     $v_name = $e["year_edition"] ."-". $e["month_edition"] ." ". $e["name_service"];
     $o_edition .= "<li><a href='".$v_url."'>".$v_name."</a></li>";
