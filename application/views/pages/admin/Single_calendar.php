@@ -14,7 +14,7 @@ foreach ($years as $e) {
 $o_edition = '';
 if($editions){
   foreach ($editions as $e) {
-    $v_url = "/". $this->uri->segment(1);
+    $v_url = "/". $this->uri->segment(1)."/". $this->uri->segment(2)."/". $this->uri->segment(3);
     if($this->uri->total_segments()<3){
       $v_url = "/". $this->uri->segment(1) . "/" .$e["id_edition"];
     }
