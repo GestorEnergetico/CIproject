@@ -9,7 +9,6 @@ foreach ($years as $year) {
 ?>
 <div class="row single_calendar ">
   <div class="col-sm-4">
-
     <ul class="anio">
       <li>
         <h3>Años</h3>

@@ -132,9 +132,6 @@ nav{}
 .single_calendar ul{
   list-style: none;
 }
-.single_calendar ul li:first-child{
-  border-top: 1px solid #ccc;
-}
 .single_calendar ul li{
   padding: 5px 10px;
   border-bottom: 1px solid #ccc;
