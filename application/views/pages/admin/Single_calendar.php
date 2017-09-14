@@ -1,19 +1,29 @@
 <?php
 
 // by default year
-$anio='';
+$o_anio='';
 foreach ($years as $year) {
-  $url = "/". $this->uri->uri_string() . "/" .$year["year_edition"];
-  $anio .= "<li><a href='".$url."'>".$year["year_edition"]."</a></li>";
+  $v_url = "/". $this->uri->uri_string() . "/" .$year["year_edition"];
+  $anio .= "<li><a href='".$v_url."'>".$year["year_edition"]."</a></li>";
 }
 
 //editions when year exists
-$edition = '';
+$o_edition = '';
 if($editions){
   foreach ($editions as $e) {
     $v_url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
     $v_name = $e["year_edition"] ."-". $e["month_edition"] ." ". $e["name_service"];
-    $edition .= "<li><a href='".$v_url."'>".$v_name."</a></li>";
+    $o_edition .= "<li><a href='".$v_url."'>".$v_name."</a></li>";
+  }
+}
+
+//courses when editions exists
+$o_course = '';
+if($editions){
+  foreach ($courses as $e) {
+    $v_url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
+    $v_name = 'course';
+    $o_course .= "<li><a href='".$v_url."'>".$v_name."</a></li>";
   }
 }
 
@@ -25,7 +35,7 @@ if($editions){
       <li>
         <h3>Años</h3>
       </li>
-      <?php echo $anio; ?>
+      <?php echo $o_anio; ?>
     </ul>
   </div>
 
@@ -34,7 +44,7 @@ if($editions){
       <li>
         <h3>Edicion</h3>
       </li>
-      <?php echo $edition; ?>
+      <?php echo $o_edition; ?>
     </ul>
   </div>
 
@@ -43,7 +53,7 @@ if($editions){
       <li>
         <h3>Aula</h3>
       </li>
-      <?php echo $courses; ?>
+      <?php echo $o_course; ?>
     </ul>
   </div>
 </div>
