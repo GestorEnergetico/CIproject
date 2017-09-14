@@ -38,10 +38,11 @@ public function get_editions($year){
   return $result = $query->result_array();
 }
 public function get_courses($id){
-  $this->db->select('id_calendar, name_calendar');
-  $this->db->from('calendars');
-  // $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
-  // $this->db->where('courses.id_course', $id);
+  $this->db->select('courses.id_course, modules.name_module');
+  $this->db->from('courses');
+  $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
+  $this->db->join('courses_editions', 'courses_editions.fk_course = courses.id_course', 'left');
+  $this->db->where('courses_editions.fk_edition', $id);
   $query = $this->db->get();
   return $result = $query->result_array();
 }
