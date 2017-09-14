@@ -83,7 +83,13 @@ $route['aulas/(:num)'] = 'aulas/get_id/$1';
 $route['aulas/(:num)/edit'] = 'aulas/get_id/$1';
 
 
+//main calendar
 $route['calendar/(:num)'] = 'calendar/get_id/$1';
+//main calendar-> editions
+$route['calendar/(:num)/(:num)'] = 'calendar/get_id/$1/$2';
+//main calendar-> editions -> courses
+$route['calendar/(:num)/(:num)/(:num)'] = 'calendar/get_id/$1/$2/$3';
+// calendar options
 $route['calendar/(:num)/new'] = 'calendar/new_calendar/$1';
 $route['calendar/(:num)/edit'] = 'calendar/edit_calendar/$1';
 $route['calendar/(:num)/delete'] = 'calendar/delete/$1';
