@@ -3,7 +3,7 @@
 $out='';
 print_r($years);
 foreach ($years as $year) {
-$out .= "<li>".$year."</li>";
+$out .= "<li>".$year["year_edition"]."</li>";
 }
 ?>
 <ul>
