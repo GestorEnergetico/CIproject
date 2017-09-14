@@ -3,7 +3,7 @@
 // by default year
 $anio='';
 foreach ($years as $year) {
-  $anio .= "<li><a href='#'>".$year["year_edition"]."</a></li>";
+  $anio .= "<li><a href='/".$year["year_edition"]."'>". $this->uri->uri_string()."/".$year["year_edition"]."</a></li>";
 }
 
 

@@ -28,11 +28,12 @@ public function get_years(){
   $query = $this->db->get();
   return $result = $query->result_array();
 }
-public function get_editions($id){
+public function get_editions($year){
   $this->db->select('editions.id_edition,editions.year_edition,editions.month_edition,services.name_service');
   $this->db->from('editions');
   $this->db->join('services', 'services.id_service = editions.fk_service', 'left');
-  $this->db->where('editions.id_edition', $id);
+  $this->db->where('editions.year_edition', $year);
+  
   $query = $this->db->get();
   return $result = $query->result_array();
 }
