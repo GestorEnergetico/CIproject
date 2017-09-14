@@ -29,10 +29,10 @@ public function get_years(){
   return $result = $query->result_array();
 }
 public function get_editions($id){
-  $this->db->select('id_calendar, name_calendar');
-  $this->db->from('calendars');
-  // $this->db->join('modules', 'courses.fk_module = modules.id_module', 'left');
-  // $this->db->where('courses.id_course', $id);
+  $this->db->select('editions.id_edition,editions.year_edition,editions.month_edition,services.name_service');
+  $this->db->from('editions');
+  $this->db->join('services', 'services.id_service = editions.fk_service', 'left');
+  $this->db->where('editions.id_edition', $id);
   $query = $this->db->get();
   return $result = $query->result_array();
 }
