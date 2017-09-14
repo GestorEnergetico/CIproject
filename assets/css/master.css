@@ -136,7 +136,11 @@ nav{}
   padding: 5px 10px;
   border-bottom: 1px solid #ccc;
 }
-.single_calendar ul li:hover{
+.single_calendar ul li a{
+  display: block;
+}
+
+.single_calendar ul li a:hover{
   background: #ccc;
 }
 /*------ /Calendar -------*/
