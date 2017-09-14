@@ -3,7 +3,7 @@
 // by default year
 $o_anio='';
 foreach ($years as $e) {
-  $v_url = $this->uri->uri_string();
+  $v_url = "/". $this->uri->uri_string();
   if($this->uri->total_segments()<2){
     $v_url = "/". $this->uri->uri_string() . "/" .$e["year_edition"];
   }
@@ -14,7 +14,7 @@ foreach ($years as $e) {
 $o_edition = '';
 if($editions){
   foreach ($editions as $e) {
-    $v_url = $this->uri->uri_string();
+    $v_url = "/". $this->uri->uri_string();
     if($this->uri->total_segments()<3){
       $v_url = "/". $this->uri->uri_string() . "/" .$e["id_edition"];
     }
@@ -27,7 +27,7 @@ if($editions){
 $o_course = '';
 if($courses){
   foreach ($courses as $e) {
-    $v_url = $this->uri->uri_string();
+    $v_url = "/". $this->uri->uri_string();
     if($this->uri->total_segments()<4){
       $v_url = "/". $v_url . "/" .$e["id_edition"];
     }
