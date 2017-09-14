@@ -3,10 +3,10 @@
 // by default year
 $o_anio='';
 foreach ($years as $e) {
-  $v_url = "/". $this->uri->uri_string();
-  if($this->uri->total_segments()<2){
-    $v_url = "/". $this->uri->uri_string() . "/" .$e["year_edition"];
-  }
+  $v_url = "/". $this->uri->segment(1);
+  $v_url .= "/". $this->uri->segment(2);
+  $v_url .= "/". $e["year_edition"];
+
   $o_anio .= "<li><a href='".$v_url."'>".$e["year_edition"]."</a></li>";
 }
 
@@ -14,10 +14,11 @@ foreach ($years as $e) {
 $o_edition = '';
 if($editions){
   foreach ($editions as $e) {
-    $v_url = "/". $this->uri->segment(1)."/". $this->uri->segment(2)."/". $this->uri->segment(3);
-    if($this->uri->total_segments()<3){
-      $v_url = "/". $this->uri->segment(1) . "/" .$e["id_edition"];
-    }
+    $v_url = "/". $this->uri->segment(1);
+    $v_url .= "/". $this->uri->segment(2);
+    $v_url .= "/". $this->uri->segment(3);
+    $v_url .= "/" .$e["id_edition"];
+
     $v_name = $e["year_edition"] ."-". $e["month_edition"] ." ". $e["name_service"];
     $o_edition .= "<li><a href='".$v_url."'>".$v_name."</a></li>";
   }
@@ -27,7 +28,11 @@ if($editions){
 $o_course = '';
 if($courses){
   foreach ($courses as $e) {
-    $v_url = "/". $this->uri->uri_string();
+    $v_url = "/". $this->uri->segment(1);
+    $v_url .= "/". $this->uri->segment(2);
+    $v_url .= "/". $this->uri->segment(3);
+    $v_url .= "/". $this->uri->segment(4);
+    $v_url .= "/" .$e["id_edition"];
     if($this->uri->total_segments()<4){
       $v_url = "/". $v_url . "/" .$e["id_edition"];
     }
