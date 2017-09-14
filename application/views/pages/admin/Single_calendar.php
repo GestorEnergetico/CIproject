@@ -24,7 +24,7 @@ foreach ($years as $year) {
       <li>
         <h3>Edicion</h3>
       </li>
-      <?php echo $anio; ?>
+      <?php echo $editions; ?>
     </ul>
   </div>
 
@@ -33,7 +33,7 @@ foreach ($years as $year) {
       <li>
         <h3>Aula</h3>
       </li>
-      <?php echo $anio; ?>
+      <?php echo $courses; ?>
     </ul>
   </div>
 </div>

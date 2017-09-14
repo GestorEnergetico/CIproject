@@ -17,7 +17,9 @@ class Calendar extends CI_Controller{
     $this->data['middle'] = 'pages/admin/Calendar_list';
     $this->load->view('template',$this->data);
   }
-  public function get_id($id)  {
+  public function get_id($id,$editions,$courses)  {
+    $this->data["editions"] = $editions;
+    $this->data["courses"] = $courses;
     $this->data["years"] = $this->Calendar_model->get_years();
     $this->data['middle'] = 'pages/admin/Single_calendar';
     $this->load->view('template',$this->data);
