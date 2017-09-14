@@ -127,3 +127,14 @@ nav{}
       }
       /*------ /Footer -------*/
     }
+
+/*------ Calendar -------*/
+.single_calendar ul{}
+.single_calendar ul li{
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+.single_calendar ul li:hover{
+  background: #ccc;
+}
+/*------ /Calendar -------*/
