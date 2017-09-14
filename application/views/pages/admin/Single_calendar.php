@@ -1,6 +1,7 @@
 <?php
 
 $out='';
+print_r($years);
 foreach ($years as $year) {
 $out .= "<li>".$year."</li>";
 }
