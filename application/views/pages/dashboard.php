@@ -1,7 +1,3 @@
-<p>Some widgets</p>
-<p>Some widgets</p>
-<p>Some widgets</p>
-<p>Some widgets</p>
-<p>Some widgets</p>
-<p>Some widgets</p>
-<p>Some widgets</p>
+<p>Lasts Courses</p>
+<p>Lasts Users</p>
+<p>Main Calendar</p>
