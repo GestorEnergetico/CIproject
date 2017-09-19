@@ -17,7 +17,7 @@
       <img style="max-width:120px;" src="assets/img/gestor-energetico-logo.png" alt="Logo Gestor Energético">
       <div class="login">
         <form  action="<?php echo base_url('/login'); ?>" method="post">
-          <label><i class="fa fa-user" aria-hidden="true"></i> <input type="text" placeholder="Username" name="user_email" value=""></label>
+          <label><i class="fa fa-user" aria-hidden="true"></i> <input type="text" autofocus placeholder="Username" name="user_email" value=""></label>
           <label><i class="fa fa-lock" aria-hidden="true"></i> <input type="password" placeholder="Password" name="user_password" value=""></label>
           <input type="text" class="hidden" name="refer" value="<?php echo $this->session->flashdata('refer'); ?>">
           <button type="submit" name="button">Log in</button>
